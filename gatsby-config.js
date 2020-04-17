@@ -5,6 +5,10 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: `Romaric Fargetton`,
+    description: `Romaric Fargetton is a frontend developer, designer and teacher`
+  },
   plugins: [
     `gatsby-plugin-netlify-cms`,
     {

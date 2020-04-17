@@ -2,10 +2,9 @@ backend:
   name: github
   repo: rfargetton/netlify-cms-test
 
-
 media_folder: static/assets
 public_folder: /assets
-  /* Your site config here */
+
 collections:
     - name: blog
       label: blog
