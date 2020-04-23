@@ -8,10 +8,55 @@ public_folder: /assets
 collections:
     - name: blog
       label: blog
-      folder: blog
+      folder: content/blog
       create: true
       fields:
-        - { name: path, label: Path }
-        - { name: date, label: Date, widget: datetime }
-        - { name: title, label: Title }
-        - { name: body, label: Body, widget: markdown }
+        - { name: "title", label: "Title" }
+        - { name: "body", label: "Body", widget: "markdown" }
+        - { name: "date", label: "Date", widget: "datetime" }
+        - { name: "featured image", label: "image", widget: "image" }
+        - { name: "type", label: "Type", widget: "hidden", default: "blog" }
+
+    - name: social
+      label: social
+      folder: content/social
+      create: true
+      fields:
+        - { name: "title", label: "Title" }
+        - { name: "link", label: "Link" }
+        - { name: "type", label: "Type", widget: "hidden", default: "social" }
+
+
+    - name: project
+      label: project
+      folder: content/project
+      create: true
+      fields:
+        - { name: "title", label: "Title" }
+        - { name: "body", label: "Body", widget: "markdown" }
+        - { name: "featured image", label: "image", widget: "image", required: false }
+        - { name: "link", label: "Link" }
+        - { name: "type", label: "Type", widget: "hidden", default: "project" }
+
+    - name: service
+      label: service
+      folder: content/service
+      create: true
+      fields:
+        - { name: "title", label: "Title" }
+        - { name: "body", label: "body", widget: "markdown" }
+        - { name: "icon", label: "icon", widget: "image" }
+        - { name: "type", label: "Type", widget: "hidden", default: "service" }
+
+    - name: pages
+      label: pages
+      files:
+      - label: "Home Page" 
+        name: "Home"
+        file: content/pages/home.md
+        fields:
+          - { name: "title", label: "title" }
+          - { name: "heading", lable: "Heading" }
+          - { name: "subheading", label: "Subheading" }
+
+
