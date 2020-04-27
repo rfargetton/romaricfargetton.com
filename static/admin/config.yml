@@ -4,12 +4,14 @@ backend:
 
 media_folder: static/assets
 public_folder: /assets
+locale: "fr"
 
 collections:
     - name: blog
       label: blog
       folder: content/blog
       create: true
+      slug: "{{year}}-{{month}}-{{dat—}}-{{slug}}"
       fields:
         - { name: "title", label: "Title" }
         - { name: "body", label: "Body", widget: "markdown" }
@@ -55,8 +57,9 @@ collections:
         name: "Home"
         file: content/pages/home.md
         fields:
-          - { name: "title", label: "title" }
+          - { name: "title", label: "title", widget: "string", default: "home" }
           - { name: "heading", lable: "Heading" }
-          - { name: "subheading", label: "Subheading" }
+          - { name: "subheading", label: "Subheading", widget: "text"  }
+          - { name: "avatar", label: "Avatar", widget: "image" }
 
 

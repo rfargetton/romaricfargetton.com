@@ -6,7 +6,7 @@ import useSocialLinks from '../hooks/SocialLinks' ;
 
 const Footer = () => {
   const { title } = useSiteMetadata() ;
-  const socialLinkEdges =  useSocialLinks() ;
+  const [ github, instagram ] =  useSocialLinks() ;
 
   return (
     <footer>
@@ -29,14 +29,17 @@ const Footer = () => {
 
         <div className="footer-social">
           <ul>
+            <li>
+              <a href={github.node.frontmatter.link}>
+                {github.node.frontmatter.title}
+              </a>
+            </li>
 
-            {socialLinkEdges.map( ({node: link}) => (
-              <li key={link.id}>
-                <a href={link.frontmatter.link}>
-                  {link.frontmatter.title}
-                  </a>
-              </li>
-            ))}
+            <li>
+              <a href={instagram.node.frontmatter.link}>
+                {instagram.node.frontmatter.title}
+              </a>
+            </li>
 
           </ul>
         </div>

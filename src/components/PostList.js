@@ -1,4 +1,5 @@
 import React from 'react' ;
+import { Link, graphql } from 'gatsby' ;
 
 const PostList = ({ posts }) => {
   console.log(posts);
@@ -7,8 +8,10 @@ const PostList = ({ posts }) => {
       {posts.map(({node: post}) => {
         return (
           <div className="post" key={post.id}>
-            <h3>{post.frontmatter.title}</h3>
-            <p>{post.excerpt}</p>
+            <Link to={post.fields.slug}> 
+              <h3>{post.frontmatter.title}</h3>
+              <p>{post.excerpt}</p>
+            </Link>
           </div>
         )
       })}
