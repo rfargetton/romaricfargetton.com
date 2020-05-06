@@ -3,7 +3,7 @@ const { createFilePath } = require("gatsby-source-filesystem") ;
 
 // Creating pages for each post
 exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions 
+  const { createPage } = actions ;
   // Request
   return graphql(`
     {
@@ -18,6 +18,7 @@ exports.createPages = ({ actions, graphql }) => {
           }
           frontmatter {
             title
+            tags 
           }
         }
       }
@@ -30,17 +31,47 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors);
     }
 
-    // Page Creation
-    result.data.allMarkdownRemark.edges.map(({node}) => {
+    const posts = result.data.allMarkdownRemark.edges ;
+    // Post Page Creation
+    posts.forEach((edge) => {
       createPage({
-        path: `${node.fields.slug}`,
+        path: `${edge.node.fields.slug}`,
         component: path.resolve(`src/templates/post.js`), 
         context: {
-          id : node.id
-        }, 
+          id : edge.node.id
+        } 
       })
     })
+    // Iterate through each post
+    // Putting all tags in 'tags'
+    const tags = [];
+    posts.forEach(( edge ) => {
+      if(edge.node.frontmatter.tags) {
+        tags.push(...edge.node.frontmatter.tags) ;
+      }
+    });
+    // Remove duplicates
+    const cleanTags = [];
+    tags.forEach((tag, index) => {
+      if(tags.indexOf(tag) == index){
+        cleanTags.push(tag);
+      }
+    });
+    // Tag Page Creation
+    console.log(cleanTags);
+    cleanTags.forEach((tag) => {
+      createPage({
+        path: `/tags/${tag}`,
+        component: path.resolve(`src/templates/tag.js`), 
+        context: {
+          tag
+        } 
+      })
+    })
+    
+
   })
+
 }
 
 // creating node field for slug
