@@ -1,6 +1,7 @@
 import React from 'react' ;
 import { Link } from 'gatsby' ;
 
+import Logo from './Logo.js' ;
 import useSiteMetadata from '../hooks/SiteMetadata' ;
 
 const Header = () => {
@@ -11,6 +12,7 @@ const Header = () => {
       <div className="container">
 
         <div className="brand">
+          <Logo />
           <Link to="/">
             { title }
           </Link>
