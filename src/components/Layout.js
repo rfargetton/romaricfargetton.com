@@ -10,7 +10,8 @@ const Layout = ({ children }) => {
   return (
     <div>
       <Helmet
-        defaultTitle={title + " | Frontend Developer " }
+        titleTemplate={ " %s  — " + title }
+        defaultTitle={title + " — Frontend Developer " }
       >
         <html lang="fr" />
         <meta name="description" content={description} />

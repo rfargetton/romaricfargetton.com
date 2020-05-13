@@ -29,7 +29,6 @@ collections:
         - { name: "link", label: "Link" }
         - { name: "type", label: "Type", widget: "hidden", default: "social" }
 
-
     - name: project
       label: project
       folder: content/project
@@ -54,13 +53,25 @@ collections:
     - name: pages
       label: pages
       files:
-      - label: "Home Page" 
-        name: "Home"
+      - label: "Home" 
+        name: "index"
         file: content/pages/home.md
         fields:
           - { name: "title", label: "title", widget: "string", default: "home" }
-          - { name: "heading", lable: "Heading" }
+          - { name: "heading", label: "Heading" }
           - { name: "subheading", label: "Subheading", widget: "text"  }
           - { name: "avatar", label: "Avatar", widget: "image" }
+      - label: "À Propos" 
+        name: "a-propos"
+        file: content/pages/a-propos.md
+        fields:
+          - { name: "title", label: "title", widget: "string", default: "À Propos" }
+          - { name: "body", label: "Body", widget: "markdown" }
+      - label: "Contact" 
+        name: "contact"
+        file: content/pages/contact.md
+        fields:
+          - { name: "title", label: "title", widget: "string", default: "Contact" }
+          - { name: "body", label: "Body", widget: "markdown" }
 
 

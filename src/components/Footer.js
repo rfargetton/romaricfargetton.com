@@ -20,10 +20,9 @@ const Footer = () => {
 
         <div className="footer-navigation">
           <ul>
-            <li><Link to="/">Projetcs</Link></li>
             <li><Link to="/">Blog</Link></li>
-            <li><Link to="/">About</Link></li>
-            <li><Link to="/">Contact</Link></li>
+            <li><Link to="/a-propos">À Propos</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
 
