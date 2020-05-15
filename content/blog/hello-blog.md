@@ -6,5 +6,6 @@ type: blog
 tags:
   - javascript
   - tech
+  - road to ruin
 ---
 This is my first post's content !
