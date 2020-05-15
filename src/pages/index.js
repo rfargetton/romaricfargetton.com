@@ -13,9 +13,12 @@ const Home = ({ data }) => {
     <Layout>
       <h1>{page.frontmatter.heading}</h1>
       <p>{page.frontmatter.subheading}</p>
-      <PostList 
-        posts={posts} 
-      />
+      <section>
+        <h2>Articles récents</h2>
+        <PostList 
+          posts={posts} 
+        />
+      </section>
     </Layout>
   )
 

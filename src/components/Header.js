@@ -19,11 +19,9 @@ const Header = () => {
         </div>
 
         <div className="navigation">
-          <ul>
-            <li><Link to="/">Blog</Link></li>
-            <li><Link to="/a-propos">À Propos</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
+          <Link to="/">Blog</Link>
+          <Link to="/a-propos">À Propos</Link>
+          <Link to="/contact">Contact</Link>
         </div>
 
       </div>

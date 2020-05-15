@@ -1,7 +1,8 @@
 const path = require("path") ;
+const _ = require("lodash");
 const { createFilePath } = require("gatsby-source-filesystem") ;
 
-// Creating pages for each post
+// Creating pages for each post and tag
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions ;
   // Request
@@ -43,25 +44,25 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
     // Iterate through each post
-    // Putting all tags in 'tags'
-    const tags = [];
+    // Putting all tags in "allTags"
+    const allTags = [];
     posts.forEach(( edge ) => {
       if(edge.node.frontmatter.tags) {
-        tags.push(...edge.node.frontmatter.tags) ;
+        allTags.push(...edge.node.frontmatter.tags) ;
       }
     });
     // Remove duplicates
-    const cleanTags = [];
-    tags.forEach((tag, index) => {
-      if(tags.indexOf(tag) == index){
-        cleanTags.push(tag);
+    const uniqueTags = [];
+    allTags.forEach((tag, index) => {
+      if(allTags.indexOf(tag) == index){
+        uniqueTags.push(tag);
       }
     });
-    // Tag Page Creation
-    console.log(cleanTags);
-    cleanTags.forEach((tag) => {
+    // Create a page for each tag in "tags" 
+    console.log(`create ${uniqueTags.length} tag pages - ${uniqueTags.join(', ')}`);
+    uniqueTags.forEach((tag) => {
       createPage({
-        path: `/tags/${tag}`,
+        path: `/tags/${_.kebabCase(tag)}`,
         component: path.resolve(`src/templates/tag.js`), 
         context: {
           tag
