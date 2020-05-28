@@ -23,7 +23,7 @@ const Post = ({ data }) => {
         <header>
           <h1>{post.frontmatter.title}</h1>
           <img src={avatar} alt="romaric" />
-          <p>Publié le <time datetime={date}>{formattedDate}</time></p>
+          <p>Publié le <time dateTime={date}>{formattedDate}</time></p>
           <PostTags tags={post.frontmatter.tags} />
         </header>
         <div dangerouslySetInnerHTML={{ __html : post.html }} />

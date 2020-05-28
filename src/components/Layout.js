@@ -1,14 +1,19 @@
-import React from "react" ;
+import React, { useState } from "react" ;
 import { Helmet } from "react-helmet" ;
 
-import Header from "./Header.js" ;
 import useSiteMetadata from "../hooks/SiteMetadata.js" ;
+import GlobalStyles from "../styles/Global.js" ;
+import Header from "./Header.js" ;
 import Footer from "./Footer.js" ;
 
+
 const Layout = ({ children }) => {
+
   const { title, description } = useSiteMetadata();
+
   return (
     <div>
+      <GlobalStyles />
       <Helmet
         titleTemplate={ " %s  — " + title }
         defaultTitle={title + " — Frontend Developer " }

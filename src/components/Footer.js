@@ -3,15 +3,16 @@ import { Link } from 'gatsby' ;
 
 import useSiteMetadata from '../hooks/SiteMetadata' ;
 import useSocialLinks from '../hooks/SocialLinks' ;
+import Container from "./Container.js" ;
 
 const Footer = () => {
   const { title } = useSiteMetadata() ;
-  const [ github, instagram ] =  useSocialLinks() ;
+  const [github, instagram] =  useSocialLinks() ;
 
   return (
     <footer>
 
-      <div className="container">
+      <Container>
         <div className="brand">
           <Link to="/">
             { title }
@@ -43,7 +44,7 @@ const Footer = () => {
           </ul>
         </div>
 
-      </div>
+      </Container>
 
     </footer>
   )

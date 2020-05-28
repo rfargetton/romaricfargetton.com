@@ -1,8 +1,12 @@
-import React from "react" ;
+import React, { useState } from "react" ;
 import { graphql } from "gatsby" ;
+import styled from "styled-components" ;
 
 import Layout from "../components/Layout.js" ;
+import Container from "../components/Container.js" ;
+import { PageHeader, HeaderIntro, HeaderTitle } from "../components/PageHeader.js" ;
 import PostList from "../components/PostList.js" ;
+import avatar from "../img/avatar-1.jpg" ;
 
 const Home = ({ data }) => {
 
@@ -11,14 +15,20 @@ const Home = ({ data }) => {
 
   return (
     <Layout>
-      <h1>{page.frontmatter.heading}</h1>
-      <p>{page.frontmatter.subheading}</p>
-      <section>
+      <PageHeader 
+        image={avatar} 
+        alt="romaric"
+      >
+        <HeaderTitle>{page.frontmatter.heading}</HeaderTitle>
+        <HeaderIntro>{page.frontmatter.subheading}</HeaderIntro>
+      </PageHeader>
+      <Container>
         <h2>Articles récents</h2>
+        <hr></hr>
         <PostList 
           posts={posts} 
         />
-      </section>
+      </Container>
     </Layout>
   )
 
