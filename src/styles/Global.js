@@ -13,7 +13,12 @@ const GlobalStyles = createGlobalStyle`
   }
   a {
     text-decoration: none;
-    color: $
+    color: ${props => props.theme.link};
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
 `
 

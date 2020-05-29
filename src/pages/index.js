@@ -1,10 +1,12 @@
 import React, { useState } from "react" ;
-import { graphql } from "gatsby" ;
+import { graphql, Link } from "gatsby" ;
 import styled from "styled-components" ;
 
 import Layout from "../components/Layout.js" ;
 import Container from "../components/Container.js" ;
 import { PageHeader, HeaderIntro, HeaderTitle } from "../components/PageHeader.js" ;
+import { SectionWrapper, SectionTitle } from "../components/SectionTitle.js" ;
+import Button from "../components/Button.js" ;
 import PostList from "../components/PostList.js" ;
 import avatar from "../img/avatar-1.jpg" ;
 
@@ -21,14 +23,21 @@ const Home = ({ data }) => {
       >
         <HeaderTitle>{page.frontmatter.heading}</HeaderTitle>
         <HeaderIntro>{page.frontmatter.subheading}</HeaderIntro>
+        <Button>
+          <Link to='/a-propos'><span>En savoir plus</span></Link>
+        </Button>
       </PageHeader>
-      <Container>
-        <h2>Articles récents</h2>
-        <hr></hr>
-        <PostList 
-          posts={posts} 
-        />
-      </Container>
+      <SectionWrapper>
+        <Container>
+          <SectionTitle>
+            <h2>Articles récents</h2>
+          </SectionTitle>
+          <PostList 
+            posts={posts} 
+            columns={3}
+          />
+        </Container>
+      </SectionWrapper>
     </Layout>
   )
 

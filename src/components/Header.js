@@ -12,7 +12,7 @@ import useSiteMetadata from '../hooks/SiteMetadata' ;
 const Nav = styled.nav`
 `
 const Wrapper = styled(Container)`
-  height: 80px;
+  height: 5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,7 +22,6 @@ const Brand = styled.div`
   a {
     display: flex;
     align-items: center;
-    color: ${props => props.theme.text} ;
     &:hover {
     }
   }
@@ -42,9 +41,12 @@ const NavLinkWrapper = styled.div`
   justify-content: end;
 `
 const NavLink = styled(Link).attrs({activeClassName})`
-  padding: 1rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 8px;
   color: ${props => props.theme.text} ;
   &:hover {
+    background-color: ${props => props.theme.link};
   }
   &.${activeClassName}{
     color: ${props => props.theme.text} ;
@@ -52,6 +54,10 @@ const NavLink = styled(Link).attrs({activeClassName})`
 `;
 const CTA = styled.div`
   margin-left: 1rem;
+`
+const ThemeButton = styled(Button)`
+  background-color: ${props => props.theme.background};
+  color: ${props => props.theme.text};
 `
 
 const Header = () => {
@@ -77,9 +83,9 @@ const Header = () => {
         </NavLinkWrapper>
           
         <CTA>
-          <Button handleClick={toggleTheme}>
+          <ThemeButton handleClick={toggleTheme}>
             { theme == "dark" ? <Sun /> : <Moon /> }
-          </Button>
+          </ThemeButton>
         </CTA>
 
       </Wrapper>

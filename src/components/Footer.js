@@ -1,33 +1,51 @@
 import React from 'react' ;
 import { Link } from 'gatsby' ;
+import styled from "styled-components" ;
 
 import useSiteMetadata from '../hooks/SiteMetadata' ;
 import useSocialLinks from '../hooks/SocialLinks' ;
 import Container from "./Container.js" ;
 
+const FooterWrapper = styled.footer`
+  padding: 6rem 0;
+`
+const Inner = styled(Container)`
+  display: flex;
+`
+const Brand = styled.div`
+  flex-basis: 50%;
+`
+const FooterNav = styled.div`
+  flex-basis: 25%
+`
+const FooterSocial = styled.div`
+  flex-basis: 25%;
+`
+
 const Footer = () => {
+
   const { title } = useSiteMetadata() ;
   const [github, instagram] =  useSocialLinks() ;
 
   return (
-    <footer>
+    <FooterWrapper>
 
-      <Container>
-        <div className="brand">
+      <Inner>
+        <Brand>
           <Link to="/">
             { title }
           </Link>
-        </div>
+        </Brand>
 
-        <div className="footer-navigation">
+        <FooterNav>
           <ul>
             <li><Link to="/">Blog</Link></li>
             <li><Link to="/a-propos">À Propos</Link></li>
             <li><Link to="/contact">Contact</Link></li>
           </ul>
-        </div>
+        </FooterNav>
 
-        <div className="footer-social">
+        <FooterSocial>
           <ul>
             <li>
               <a href={github.node.frontmatter.link}>
@@ -42,11 +60,11 @@ const Footer = () => {
             </li>
 
           </ul>
-        </div>
+        </FooterSocial>
 
-      </Container>
+      </Inner>
 
-    </footer>
+    </FooterWrapper>
   )
 }
 
