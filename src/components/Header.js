@@ -10,6 +10,12 @@ import Button from "./Button.js" ;
 import useSiteMetadata from '../hooks/SiteMetadata' ;
 
 const Nav = styled.nav`
+  background-color: ${props => props.theme.background} ;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 `
 const Wrapper = styled(Container)`
   height: 5rem;
@@ -22,8 +28,6 @@ const Brand = styled.div`
   a {
     display: flex;
     align-items: center;
-    &:hover {
-    }
   }
 `
 const NavLogo = styled(Logo)`
@@ -46,10 +50,11 @@ const NavLink = styled(Link).attrs({activeClassName})`
   border-radius: 8px;
   color: ${props => props.theme.text} ;
   &:hover {
-    background-color: ${props => props.theme.link};
+    background-color: ${props => props.theme.backgroundHighlight};
+    color: ${props => props.theme.link};
   }
   &.${activeClassName}{
-    color: ${props => props.theme.text} ;
+    background-color: ${props => props.theme.backgroundHighlight};
   }
 `;
 const CTA = styled.div`

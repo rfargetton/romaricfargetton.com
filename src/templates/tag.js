@@ -4,6 +4,7 @@ import { graphql } from "gatsby" ;
 import _ from "lodash" ;
 
 import Layout from "../components/Layout.js" ;
+import Container from "../components/Container.js";
 import PostList from "../components/PostList.js" ;
 
 const Tag = ({ data, pageContext }) => {
@@ -14,11 +15,14 @@ const Tag = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <Helmet title={capitalizedTag} /> 
-      <h1>{capitalizedTag}</h1>
-      <PostList 
-        posts={posts} 
-      />
+      <Container>
+        <Helmet title={capitalizedTag} /> 
+        <h1>{capitalizedTag}</h1>
+        <PostList 
+          posts={posts} 
+          columns={2}
+        />
+      </Container>
     </Layout>
   )
 
@@ -38,6 +42,7 @@ export const query = graphql`
           }
           frontmatter {
             title
+            featured_image
           }
         }
       }

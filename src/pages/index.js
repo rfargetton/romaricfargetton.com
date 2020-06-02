@@ -58,6 +58,7 @@ export const query = graphql`
           }
           frontmatter {
             title
+            featured_image
           }
         }
       }

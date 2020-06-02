@@ -6,10 +6,11 @@ const Wrapper = styled.div`
   align-items: center;
 `
 const Line = styled.div`
-  height: 2px;
-  background-color: ${props => props.theme.text};
+  height: 3px;
   flex-grow: 2;
   margin-left: 2rem;
+  border-radius: 8px;
+  background-color: ${props => props.theme.backgroundHighlight};
 `
 export const SectionWrapper = styled.section`
   padding: 3rem 0;

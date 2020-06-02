@@ -2,6 +2,7 @@ import React from "react" ;
 import styled from "styled-components";
 import { GitHub, Linkedin, Mail } from "react-feather" ;
 
+import useSocialLinks from '../hooks/SocialLinks' ;
 import Container from "./Container.js" ;
 import { SectionWrapper } from "../components/SectionTitle.js" ;
 
@@ -15,7 +16,6 @@ const HeaderImg = styled.div`
   img {
     width: 100%;
     border-radius: 50%;
-    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.25);
   }
 `
 const HeaderTxt =  styled.div`
@@ -33,6 +33,8 @@ const SocialBar = styled.div`
   a {
     padding: 8px;
     color: ${props => props.theme.text} ;
+    display: flex;
+    align-items: end;
   }
 `
 export const HeaderIntro = styled.p`
@@ -47,15 +49,36 @@ export const HeaderTitle = styled.h1`
 `
 
 export const PageHeader = ({ children, image, alt }) => {
+  
+  const [ github, email, linkedin] =  useSocialLinks() ;
+
   return (
     <SectionWrapper>
       <Inner>
         <HeaderImg>
           <img src={image} alt={alt} />
           <SocialBar>
-            <a href=""><GitHub /></a>
-            <a href=""><Linkedin /></a>
-            <a href=""><Mail /></a>
+              <a 
+                href={github.node.frontmatter.link}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <GitHub />
+              </a>
+              <a 
+                href={linkedin.node.frontmatter.link}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Linkedin />
+              </a>
+              <a 
+                href={email.node.frontmatter.link}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Mail />
+              </a>
           </SocialBar>
         </HeaderImg>
         <HeaderTxt>

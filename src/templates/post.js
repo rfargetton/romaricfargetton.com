@@ -3,8 +3,8 @@ import { Helmet } from "react-helmet" ;
 import { graphql } from "gatsby" ;
 
 import Layout from "../components/Layout.js" ;
+import Container from "../components/Container.js";
 import PostTags from "../components/PostTags.js" ;
-import avatar from "../img/avatar-1.jpg" ;
 
 const Post = ({ data }) => {
 
@@ -18,16 +18,18 @@ const Post = ({ data }) => {
 
   return (
     <Layout>
-      <Helmet title={post.frontmatter.title} /> 
-      <article>
-        <header>
-          <h1>{post.frontmatter.title}</h1>
-          <img src={avatar} alt="romaric" />
-          <p>Publié le <time dateTime={date}>{formattedDate}</time></p>
-          <PostTags tags={post.frontmatter.tags} />
-        </header>
-        <div dangerouslySetInnerHTML={{ __html : post.html }} />
-      </article>
+      <Container>
+        <Helmet title={post.frontmatter.title} /> 
+        <article>
+          <header>
+            <h1>{post.frontmatter.title}</h1>
+            <img src={post.frontmatter.featured_image} alt="romaric" />
+            <p>Publié le <time dateTime={date}>{formattedDate}</time></p>
+            <PostTags tags={post.frontmatter.tags} />
+          </header>
+          <div dangerouslySetInnerHTML={{ __html : post.html }} />
+        </article>
+      </Container>
     </Layout>
   )
 }
@@ -40,6 +42,7 @@ export const query = graphql`
       id
       html
       frontmatter {
+        featured_image
         title
         date
         tags

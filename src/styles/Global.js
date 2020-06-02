@@ -20,6 +20,11 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     margin: 0;
   }
+  main {
+    margin-top: 5rem;
+    padding: 3rem 0;
+  }
+  
 `
 
 export default GlobalStyles ;

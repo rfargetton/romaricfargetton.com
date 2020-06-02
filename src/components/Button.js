@@ -13,10 +13,10 @@ const Wrapper = styled.button`
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   border: none;
-  background-color: ${props => props.theme.text};
-  color: ${props => props.theme.background} ;
+  background-color: ${props => props.theme.backgroundHighlight};
+  color: ${props => props.theme.text} ;
   a {
-    color: ${props => props.theme.background} ;
+    color: ${props => props.theme.text} ;
   }
   span {
     margin: 0 8px;
