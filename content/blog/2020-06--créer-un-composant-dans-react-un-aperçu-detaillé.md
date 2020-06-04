@@ -1,5 +1,5 @@
 ---
-title: "Créer un composant dans React: un aperçu detaillé"
+title: Toutes les façons de créer un composant dans React
 date: 2020-06-04T10:23:57.816Z
 featured image: /assets/cropped-dp-logo-192x192.png
 type: blog
