@@ -5,8 +5,9 @@ featured image: /assets/1200px-react-icon.png
 type: blog
 tags:
   - react
+  - javascript
 ---
-Cet article résulte d'une envie de mieux comprendre les différentes façons de créer un composant dans React et surtout, les différents mécanismes à l'œuvre lors de ce processus.
+Avec React, nous sommes tous habitués à un certains nombres de procédés et de syntaxes spécifiques, notamment lorsqu'il s'agit de créer un composant. Mais sommes-nous bien sûr de comprendre tout ce que nous faisons dans React ? Cet article résulte d'une envie de mieux comprendre les différentes façons de créer un composant dans React et surtout, les différents mécanismes à l'œuvre lors de ce processus.
 
 ## En utilisant le mot clé Class
 
