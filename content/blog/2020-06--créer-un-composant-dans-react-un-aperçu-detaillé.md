@@ -7,7 +7,7 @@ tags:
   - react
   - javascript
 ---
-Avec React, nous sommes tous habitués à un certains nombres de procédés et de syntaxes spécifiques, notamment lorsqu'il s'agit de créer un composant. Mais sommes-nous bien sûrs de comprendre tout le code que nous écrivons ? Pour aller plus loin dans React, il faut nous éloigner des simples tutos et "soulever le capot" de cette librairie afin de mieux comprendre les différents mécanismes à l'œuvre lorsque nous crééons un composant.  
+Avec [React](https://fr.reactjs.org), nous sommes tous habitués à un certains nombres de procédés et de syntaxes spécifiques, notamment lorsqu'il s'agit de créer un composant. Mais sommes-nous bien sûrs de comprendre tout le code que nous écrivons ? Pour aller plus loin dans React, il faut nous éloigner des simples tutos et "soulever le capot" de cette librairie afin de mieux comprendre les différents mécanismes à l'œuvre lorsque nous crééons un composant.  
 
 ## Le mot clé class
 
