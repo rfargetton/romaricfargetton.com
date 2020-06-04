@@ -23,7 +23,7 @@ class MonComposant extends React.Component {
 
 Premier exemple d'une syntaxe que certains d'entre nous ont l'habitude d'utiliser dans React mais peut-être pas ailleurs. Et pour ces derniers, les quelques lignes de code ci-dessus peuvent être perturbantes. Que venons-nous de faire ? Nous venons de créer une classe `MonComposant` qui héritera, via le mot clé `extends` des propriétés et méthodes définies dans la classe `Component` de React. `MonComposant` est donc une **sous-classe** de `React.Component`. 
 
-Une classe n'est pas un objet mais plutôt un outil de construction d'objets. En réalité, une classe est une fonction spéciale dediée à la création d'objets. 
+> Une classe n'est pas un objet mais plutôt un outil de construction d'objets. En réalité, une classe est une fonction spéciale dédiée à la création d'objets. 
 
 On s'en rend mieux compte si on ajoute `console.log(this.__proto__.__proto__)` dans la méthode `render()` et qu'on observe le résultat dans la console. Pour rappel, La propriété `__proto__` renvoie le prototype de l'objet concerné.
 
