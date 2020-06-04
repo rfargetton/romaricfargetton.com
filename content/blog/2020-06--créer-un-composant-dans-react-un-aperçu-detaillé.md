@@ -7,11 +7,11 @@ tags:
   - react
   - javascript
 ---
-Avec React, nous sommes tous habitués à un certains nombres de procédés et de syntaxes spécifiques, notamment lorsqu'il s'agit de créer un composant. Mais sommes-nous bien sûr de comprendre tout ce que nous faisons dans React ? Cet article résulte d'une envie de mieux comprendre les différentes façons de créer un composant dans React et surtout, les différents mécanismes à l'œuvre lors de ce processus.
+Avec React, nous sommes tous habitués à un certains nombres de procédés et de syntaxes spécifiques, notamment lorsqu'il s'agit de créer un composant. Mais sommes-nous bien sûrs de comprendre tout le code que nous écrivons ? Pour aller plus loin dans React, il faut nous éloigner des simples tutos et "soulever le capot" de cette librairie afin de mieux comprendre les différents mécanismes à l'œuvre lorsque nous crééons un composant.  
 
-## En utilisant le mot clé Class
+## Le mot clé class
 
-Il s'agit de la manière la plus répandue de créer un composant dans React. Elle s'appuie sur le mot clé `class` introduit par ECMAScript 2015, connue également sous le nom de ES6. Pour résumer, Le mot-clé class est en fait un sucre syntaxique qui facilite la création d'instances d'objet.
+Il s'agit de la manière la plus répandue de créer un composant dans React. Elle s'appuie sur le mot clé `class` introduit par ECMAScript 2015, connue également sous le nom de ES6. Pour résumer, Le mot-clé class est en fait un sucre syntaxique qui facilite la création d'instances d'objet. 
 
 Nous pouvons commencer à créer le composant comme ceci:
 
@@ -20,7 +20,10 @@ class MonComposant extends React.Component {
   ...
 }
 ```
-Pour ceux qui n'ont pas l'habitude de cette syntaxe, les quelques lignes de code ci-dessus peuvent être perturbantes. Nous venons de créer une classe (ou un composant) `MonComposant` qui héritera, via le mot clé `extends` des propriétés et méthodes définies dans la classe `Component` de React. `MonComposant` est donc une **sous-classe** de `React.Component`. 
+
+Premier exemple d'une syntaxe que certains d'entre nous ont l'habitude d'utiliser dans React mais peut-être pas ailleurs. Et pour ces derniers, les quelques lignes de code ci-dessus peuvent être perturbantes. Que venons-nous de faire ? Nous venons de créer une classe `MonComposant` qui héritera, via le mot clé `extends` des propriétés et méthodes définies dans la classe `Component` de React. `MonComposant` est donc une **sous-classe** de `React.Component`. 
+
+Une classe n'est pas un objet mais plutôt un outil de construction d'objets. En réalité, une classe est une fonction spéciale dediée à la création d'objets. 
 
 On s'en rend mieux compte si on ajoute `console.log(this.__proto__.__proto__)` dans la méthode `render()` et qu'on observe le résultat dans la console. Pour rappel, La propriété `__proto__` renvoie le prototype de l'objet concerné.
 
@@ -75,6 +78,7 @@ function MyComponent(props) {
   return <div>{this.props.count}</div>
 }
 ```
+
 Or the ES6 arrow function declaration :
 
 ```javascript
