@@ -1,7 +1,7 @@
 ---
 title: Un article pour tester les différents modules Markdown
 date: 2020-06-05T12:17:26.617Z
-featured image: /assets/pngflow.com.png
+featured image: /assets/markdown.png
 type: blog
 tags:
   - markdown
