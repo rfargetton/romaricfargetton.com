@@ -20,10 +20,10 @@ tags:
 
 ### Liste non-numerotée
 
-* élement 1
-* élement 2
-* élement 3
-* élement 4
+- élement 1
+- élement 2
+- élement 3
+- élement 4
 
 ### Liste numerotée
 
