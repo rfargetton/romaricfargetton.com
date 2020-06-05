@@ -4,7 +4,7 @@ import styled from "styled-components" ;
 
 import Layout from "../components/Layout.js" ;
 import Container from "../components/Container.js" ;
-import { PageHeader, HeaderIntro, HeaderTitle } from "../components/PageHeader.js" ;
+import { HomeHeader, HeaderIntro, HeaderTitle } from "../components/HomeHeader.js" ;
 import { SectionWrapper, SectionTitle } from "../components/SectionTitle.js" ;
 import Button from "../components/Button.js" ;
 import PostList from "../components/PostList.js" ;
@@ -17,7 +17,7 @@ const Home = ({ data }) => {
 
   return (
     <Layout>
-      <PageHeader 
+      <HomeHeader 
         image={avatar} 
         alt="romaric"
       >
@@ -26,7 +26,7 @@ const Home = ({ data }) => {
         <Button>
           <Link to='/a-propos'><span>En savoir plus</span></Link>
         </Button>
-      </PageHeader>
+      </HomeHeader>
       <SectionWrapper>
         <Container>
           <SectionTitle>
@@ -58,7 +58,14 @@ export const query = graphql`
           }
           frontmatter {
             title
-            featured_image
+            featured_image {
+              childImageSharp {
+                fluid(maxHeight: 300, maxWidth: 400) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+            tags
           }
         }
       }

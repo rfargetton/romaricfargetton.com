@@ -24,7 +24,7 @@ const HeaderTxt =  styled.div`
 const SocialBar = styled.div`
   display: flex;
   border-radius: 8px;
-  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.25);
   padding: 0 8px;
   width: min-content;
   background-color: ${props => props.theme.background};
@@ -48,7 +48,7 @@ export const HeaderTitle = styled.h1`
   margin: 0;
 `
 
-export const PageHeader = ({ children, image, alt }) => {
+export const HomeHeader = ({ children, image, alt }) => {
   
   const [ github, email, linkedin] =  useSocialLinks() ;
 

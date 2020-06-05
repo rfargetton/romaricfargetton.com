@@ -14,10 +14,38 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `blog`,
+        name: `assets`,
+        path: `${__dirname}/static/assets`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
         path: `${__dirname}/content`
       }
     },
-    `gatsby-transformer-remark`
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-relative-images`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1000,
+            }
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-"
+            }
+          }
+        ]
+      }
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ]
 };

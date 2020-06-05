@@ -42,7 +42,14 @@ export const query = graphql`
           }
           frontmatter {
             title
-            featured_image
+            featured_image {
+              childImageSharp {
+                fluid(maxHeight: 300, maxWidth: 400) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+            tags
           }
         }
       }
