@@ -1,4 +1,4 @@
-import React, { useState } from "react" ;
+import React, { useState, useEffect } from "react" ;
 import styled, { ThemeProvider }  from "styled-components" ;
 
 import Themes from "../styles/Themes.js" ;
@@ -12,10 +12,13 @@ export const ThemeContext = React.createContext(defaultState);
 
 const ThemeManager = ({ children }) => {
 
-  // Get initial theme setting from localStorage or default to dark
-  const initialState = localStorage.getItem("theme") ? JSON.parse(localStorage.getItem("theme")) : "dark" ;
   // Initiate state variable `theme`
-  const [theme, setTheme] = useState(initialState) ;
+  const [theme, setTheme] = useState("dark") ;
+
+  // Get initial theme setting from localStorage or default to dark
+  useEffect(() => {
+    setTheme(localStorage.getItem("theme") ? JSON.parse(localStorage.getItem("theme")) : "dark");
+  });
   
   const getNextTheme = (prevTheme) => {
     return prevTheme == "dark" ? "light" : "dark" ;
