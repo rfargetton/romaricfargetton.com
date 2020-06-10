@@ -2,4 +2,4 @@
 title: Webdesign
 type: service
 ---
-Some text about webdesign. 
+Création de designs uniques, créatifs, adaptés aux différents supports
