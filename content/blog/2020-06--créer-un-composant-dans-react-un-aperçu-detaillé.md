@@ -1,6 +1,7 @@
 ---
 title: Toutes les façons de créer un composant dans React
 date: 2020-06-04T10:23:57.816Z
+color: mediumpurple
 featured image: /assets/1200px-react-icon.png
 type: blog
 tags:
