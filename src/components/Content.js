@@ -2,7 +2,7 @@ import React from "react" ;
 import styled from "styled-components";
 
 import Container from "./Container.js" ;
-import { SectionWrapper } from "../components/SectionTitle.js" ;
+import { SectionWrapper } from "../components/Section.js" ;
 
 const ContentBox = styled(Container)`
   background-color: ${props => props.theme.backgroundHighlight};

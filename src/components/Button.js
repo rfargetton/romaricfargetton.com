@@ -4,11 +4,8 @@ import styled from "styled-components" ;
 const Wrapper = styled.button`
   font-family: Inter, sans-serif ;
   font-weight: 600;
-  display: flex;
   font-size: 1rem;
   padding: 8px;
-  justify-content: center;
-  align-items: center;
   border-radius: 8px;
   box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
@@ -16,10 +13,13 @@ const Wrapper = styled.button`
   background-color: ${props => props.theme.backgroundHighlight};
   color: ${props => props.theme.text} ;
   a {
-    color: ${props => props.theme.text} ;
+    color: ${props => props.theme.link} ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   span {
-    margin: 0 8px;
+   margin: 0 0.5rem;
   }
 `
 

@@ -1,27 +1,38 @@
 import { graphql, useStaticQuery } from 'gatsby' ;
 
 const useSocialLinks = () => {
-  const { allMarkdownRemark : links } = useStaticQuery(
+  const links = useStaticQuery(
     graphql`
       query {
-        allMarkdownRemark(
-          filter: {frontmatter: {type: {eq: "social"}}}
-        ) {
-          edges {
-            node {
-              id
-              frontmatter {
-                title
-                link
-              }
-            }
+        github: markdownRemark(
+          frontmatter: {title: {eq: "Github"}}
+        ){
+          frontmatter {
+            title
+            link
+          }
+        }
+        linkedin: markdownRemark(
+          frontmatter: {title: {eq: "Linkedin"}}
+        ){
+          frontmatter {
+            title
+            link
+          }
+        }
+        email: markdownRemark(
+          frontmatter: {title: {eq: "Email"}}
+        ){
+          frontmatter {
+            title
+            link
           }
         }
       }
     `
   )
 
-  return links.edges ;
+  return links ;
 }
 
 export default useSocialLinks ;

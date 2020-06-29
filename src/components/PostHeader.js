@@ -18,7 +18,7 @@ const HeaderImg = styled.div`
     width: 100%;
     border-radius: 50%;
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.25);
-    background-color: ${props => props.theme.backgroundHighlight};
+    background-color: ${props => props.color};
   }
 `
 const HeaderTxt =  styled.div`
@@ -30,15 +30,15 @@ export const HeaderInfo = styled.div`
 `
 export const HeaderTitle = styled.h1`
   font-size: 2.25rem;
-  line-height: 1.2;
+  line-height: 1.3;
   margin: 0;
 `
 
-export const PostHeader = ({ children, image, alt }) => {
+export const PostHeader = ({ children, image, color, alt }) => {
   return (
     <Wrapper>
       <Inner>
-        <HeaderImg>
+        <HeaderImg color={color}>
           <Img fluid={image} />
         </HeaderImg>
         <HeaderTxt>

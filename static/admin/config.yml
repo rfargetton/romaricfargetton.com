@@ -16,6 +16,7 @@ collections:
         - { name: "title", label: "Title" }
         - { name: "body", label: "Body", widget: "markdown" }
         - { name: "date", label: "Date", widget: "datetime" }
+        - { name: "color", label: "Color" }
         - { name: "featured image", label: "image", widget: "image" }
         - { name: "type", label: "Type", widget: "hidden", default: "blog" }
         - { name: "tags", label: "Tags", widget: "list" }
@@ -38,6 +39,7 @@ collections:
         - { name: "body", label: "Body", widget: "markdown" }
         - { name: "featured image", label: "image", widget: "image", required: false }
         - { name: "link", label: "Link" }
+        - { name: "repo", label: "Repo" }
         - { name: "type", label: "Type", widget: "hidden", default: "project" }
 
     - name: service
@@ -46,8 +48,7 @@ collections:
       create: true
       fields:
         - { name: "title", label: "Title" }
-        - { name: "body", label: "body", widget: "markdown" }
-        - { name: "icon", label: "icon", widget: "image" }
+        - { name: "body", label: "Body", widget: "markdown" }
         - { name: "type", label: "Type", widget: "hidden", default: "service" }
 
     - name: pages
@@ -66,12 +67,16 @@ collections:
         file: content/pages/a-propos.md
         fields:
           - { name: "title", label: "title", widget: "string", default: "À Propos" }
+          - { name: "heading", label: "Heading" }
+          - { name: "subheading", label: "Subheading", widget: "text"  }
           - { name: "body", label: "Body", widget: "markdown" }
       - label: "Contact" 
         name: "contact"
         file: content/pages/contact.md
         fields:
           - { name: "title", label: "title", widget: "string", default: "Contact" }
+          - { name: "heading", label: "Heading" }
+          - { name: "subheading", label: "Subheading", widget: "text"  }
           - { name: "body", label: "Body", widget: "markdown" }
 
 

@@ -4,9 +4,9 @@ import { GitHub, Linkedin, Mail } from "react-feather" ;
 
 import useSocialLinks from '../hooks/SocialLinks' ;
 import Container from "./Container.js" ;
-import { SectionWrapper } from "../components/SectionTitle.js" ;
+import { Section } from "../components/Section.js" ;
 
-const Inner = styled(Container)`
+const Inner = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between; 
@@ -44,36 +44,36 @@ export const HeaderIntro = styled.p`
 `
 export const HeaderTitle = styled.h1`
   font-size: 2.25rem;
-  line-height: 1.2;
+  line-height: 1.3;
   margin: 0;
 `
 
 export const HomeHeader = ({ children, image, alt }) => {
   
-  const [ github, email, linkedin] =  useSocialLinks() ;
+  const { github, email, linkedin } =  useSocialLinks() ;
 
   return (
-    <SectionWrapper>
+    <Section>
       <Inner>
         <HeaderImg>
           <img src={image} alt={alt} />
           <SocialBar>
               <a 
-                href={github.node.frontmatter.link}
+                href={github.frontmatter.link}
                 target="_blank"
                 rel="noreferrer"
               >
                 <GitHub />
               </a>
               <a 
-                href={linkedin.node.frontmatter.link}
+                href={linkedin.frontmatter.link}
                 target="_blank"
                 rel="noreferrer"
               >
                 <Linkedin />
               </a>
               <a 
-                href={email.node.frontmatter.link}
+                href={email.frontmatter.link}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -85,7 +85,7 @@ export const HomeHeader = ({ children, image, alt }) => {
           {children}
         </HeaderTxt>
       </Inner>
-    </SectionWrapper>
+    </Section>
   )
 }
 

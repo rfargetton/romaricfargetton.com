@@ -25,7 +25,7 @@ const FooterSocial = styled.div`
 const Footer = () => {
 
   const { title } = useSiteMetadata() ;
-  const [email, linkedin, github] =  useSocialLinks() ;
+  const { github, email, linkedin } =  useSocialLinks() ;
 
   return (
     <FooterWrapper>
@@ -49,20 +49,20 @@ const Footer = () => {
           <ul>
 
             <li>
-              <a href={email.node.frontmatter.link}>
-                {email.node.frontmatter.title}
+              <a href={email.frontmatter.link}>
+                {email.frontmatter.title}
               </a>
             </li>
 
             <li>
-              <a href={github.node.frontmatter.link}>
-                {github.node.frontmatter.title}
+              <a href={github.frontmatter.link}>
+                {github.frontmatter.title}
               </a>
             </li>
 
             <li>
-              <a href={linkedin.node.frontmatter.link}>
-                {linkedin.node.frontmatter.title}
+              <a href={linkedin.frontmatter.link}>
+                {linkedin.frontmatter.title}
               </a>
             </li>
 

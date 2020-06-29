@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet" ;
 import { graphql } from "gatsby" ;
 
 import Layout from "../components/Layout.js" ;
+import { PageHeader, HeaderTitle, HeaderIntro } from "../components/PageHeader.js";
 
 const About = ({ data }) => {
 
@@ -10,8 +11,18 @@ const About = ({ data }) => {
 
   return (
     <Layout>
+
       <Helmet title={page.frontmatter.title} /> 
-      <h1>{page.frontmatter.title}</h1>
+
+      <PageHeader>
+        <HeaderTitle>
+          {page.frontmatter.heading}
+        </HeaderTitle>
+        <HeaderIntro>
+          {page.frontmatter.subheading}
+        </HeaderIntro>
+      </PageHeader>
+
     </Layout>
   )
 }
@@ -23,6 +34,8 @@ export const query = graphql`
     ){
       frontmatter {
         title
+        heading
+        subheading
       }
     }
   }

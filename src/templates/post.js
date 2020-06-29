@@ -7,16 +7,12 @@ import Container from "../components/Container.js";
 import PostTags from "../components/PostTags.js" ;
 import { PostHeader, HeaderInfo, HeaderTitle } from "../components/PostHeader.js";
 import Content from "../components/Content.js" ;
+import { formatDate } from "../helpers/formatDate.js" ;
 
 const Post = ({ data }) => {
 
   const { post } = data ;
   const date = post.frontmatter.date ;
-  const formattedDate = new Date(date).toLocaleDateString("fr-FR", {
-    day: "numeric",
-    month: "long",
-    year: "numeric" 
-  }) ;
 
   return (
     <Layout>
@@ -25,10 +21,11 @@ const Post = ({ data }) => {
         <article>
           <PostHeader
             image={post.frontmatter.featured_image.childImageSharp.fluid}
+            color={post.frontmatter.color}
             alt="random"
           >
             <HeaderTitle>{post.frontmatter.title}</HeaderTitle>
-            <HeaderInfo>Publié le <time dateTime={date}>{formattedDate}</time> | {post.timeToRead} min</HeaderInfo>
+            <HeaderInfo>Publié le <time dateTime={date}>{formatDate(date)}</time> | {post.timeToRead} min</HeaderInfo>
             <PostTags tags={post.frontmatter.tags} />
           </PostHeader>
           <Content>
@@ -49,6 +46,7 @@ export const query = graphql`
       html
       timeToRead
       frontmatter {
+        color
         featured_image {
           childImageSharp {
             fluid(maxHeight: 500, maxWidth: 500, quality: 90) {

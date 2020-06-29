@@ -8,23 +8,26 @@ const Wrapper = styled.ul`
   display: flex;
 `
 const Tag = styled(Link)`
+  font-size: 0.85rem;
   padding: 0.5rem;  
   border-radius: 8px;
   margin: 0.25rem;
-  box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.25);
   background-color: ${props => props.theme.backgroundHighlight};
+  span {
+   margin: 0 0.5rem;
+  }
 `
 
-const PostTags = ({ tags }) => {
+const PostTags = ({ tags, className }) => {
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       {tags &&
         tags.map(tag => (
           <Tag 
             key={tag} 
             to={`/tags/${_.kebabCase(tag)}/`}
           >
-            {tag}
+            <span>{_.startCase(tag)}</span>
           </Tag>
       ))}
     </Wrapper>

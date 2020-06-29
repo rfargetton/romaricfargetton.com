@@ -63,6 +63,7 @@ const CTA = styled.div`
 const ThemeButton = styled(Button)`
   background-color: ${props => props.theme.background};
   color: ${props => props.theme.text};
+  display: flex;
 `
 
 const Header = () => {
@@ -82,7 +83,7 @@ const Header = () => {
         </Brand>
 
         <NavLinkWrapper>
-          <NavLink activeClassName={activeClassName} to="/">Blog</NavLink>
+          <NavLink activeClassName={activeClassName} to="/blog">Blog</NavLink>
           <NavLink activeClassName={activeClassName} to="/a-propos">À Propos</NavLink>
           <NavLink activeClassName={activeClassName} to="/contact">Contact</NavLink>
         </NavLinkWrapper>
