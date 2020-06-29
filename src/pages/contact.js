@@ -7,6 +7,11 @@ import Layout from "../components/Layout.js" ;
 import { PageHeader, HeaderTitle, HeaderIntro } from "../components/PageHeader.js";
 import Content from "../components/Content.js" ;
 
+const urlEncode = (data) => {
+  return Object.entries(data).map((entry) => {
+    return `${encodeURIComponent(entry[0])}=${encodeURIComponent(entry[1])}` ;
+  }).join("&");
+}
 const Contact = ({ data }) => {
 
   const page = data.page ;
@@ -35,8 +40,20 @@ const Contact = ({ data }) => {
           }}
           onSubmit={(values, actions) => {
 
-            alert(JSON.stringify(values, null, 2));
-            actions.setSubmitting(false);
+            console.log(urlEncode(values));
+            fetch("/", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: urlEncode({ "form-name": "contact-form", ...values }) 
+            })
+            .then(() => {
+              alert("Success");
+              actions.resetForm();
+            })
+            .catch(() => {
+              alert("Error");
+            })
+            .finally(() => actions.setSubmitting(false));
 
           }}
           validate={(values) => {
