@@ -12,7 +12,7 @@ const Tag = styled(Link)`
   padding: 0.5rem;  
   border-radius: 8px;
   margin: 0.25rem;
-  background-color: ${props => props.theme.backgroundHighlight};
+  background-color: ${props => props.theme.background};
   span {
    margin: 0 0.5rem;
   }

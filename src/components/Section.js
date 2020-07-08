@@ -6,14 +6,14 @@ import Container from "./Container.js" ;
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  color: ${props => props.theme.text};
+  color: ${props => props.theme.secondary};
 `
 const Line = styled.div`
   height: 3px;
   flex-grow: 2;
   margin-left: 2rem;
   border-radius: 8px;
-  background-color: ${props => props.theme.text};
+  background-color: ${props => props.theme.comment};
 `
 export const SectionWrapper = styled.section`
   padding: 3rem 0;

@@ -4,9 +4,13 @@ import { GitHub, Linkedin, Mail } from "react-feather" ;
 
 import useSocialLinks from '../hooks/SocialLinks' ;
 import Container from "./Container.js" ;
-import { Section } from "../components/Section.js" ;
 
-const Inner = styled.div`
+const Wrapper = styled.section`
+  padding-bottom: 3rem;
+  padding-top: 10rem;
+  background-color: ${props => props.theme.backgroundHighlight};
+`
+const Inner = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between; 
@@ -53,8 +57,11 @@ export const HomeHeader = ({ children, image, alt }) => {
   const { github, email, linkedin } =  useSocialLinks() ;
 
   return (
-    <Section>
+    <Wrapper>
       <Inner>
+        <HeaderTxt>
+          {children}
+        </HeaderTxt>
         <HeaderImg>
           <img src={image} alt={alt} />
           <SocialBar>
@@ -81,11 +88,8 @@ export const HomeHeader = ({ children, image, alt }) => {
               </a>
           </SocialBar>
         </HeaderImg>
-        <HeaderTxt>
-          {children}
-        </HeaderTxt>
       </Inner>
-    </Section>
+    </Wrapper>
   )
 }
 

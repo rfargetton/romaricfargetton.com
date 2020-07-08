@@ -15,14 +15,15 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
     color: ${props => props.theme.link};
   }
-  ul {
+  ul, ol {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 1rem 0;
+    li {
+      margin: 0.5rem 0;
+    }
   }
   main {
-    margin-top: 5rem;
-    padding: 3rem 0;
   }
   h1, h2, h3, h4, h5, h6, p, pre {
     margin: 0;

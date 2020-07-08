@@ -5,7 +5,9 @@ import styled from "styled-components";
 import Container from "./Container.js" ;
 
 const Wrapper = styled.header`
-  padding: 3rem 0;
+  padding-bottom: 3rem;
+  padding-top: 10rem;
+  background-color: ${props => props.theme.backgroundHighlight};
 `
 const Inner = styled(Container)`
   display: flex;
@@ -38,12 +40,12 @@ export const PostHeader = ({ children, image, color, alt }) => {
   return (
     <Wrapper>
       <Inner>
-        <HeaderImg color={color}>
-          <Img fluid={image} />
-        </HeaderImg>
         <HeaderTxt>
           {children}
         </HeaderTxt>
+        <HeaderImg color={color}>
+          <Img fluid={image} />
+        </HeaderImg>
       </Inner>
     </Wrapper>
   )

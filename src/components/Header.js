@@ -10,7 +10,7 @@ import Button from "./Button.js" ;
 import useSiteMetadata from '../hooks/SiteMetadata' ;
 
 const Nav = styled.nav`
-  background-color: ${props => props.theme.background} ;
+  background-color: ${props => props.theme.backgroundHighlight};
   position: fixed;
   width: 100%;
   top: 0;
@@ -50,11 +50,11 @@ const NavLink = styled(Link).attrs({activeClassName})`
   border-radius: 8px;
   color: ${props => props.theme.text} ;
   &:hover {
-    background-color: ${props => props.theme.backgroundHighlight};
+    background-color: ${props => props.theme.background};
     color: ${props => props.theme.link};
   }
   &.${activeClassName}{
-    background-color: ${props => props.theme.backgroundHighlight};
+    background-color: ${props => props.theme.background};
   }
 `;
 const CTA = styled.div`

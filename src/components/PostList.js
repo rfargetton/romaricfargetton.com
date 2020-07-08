@@ -8,11 +8,11 @@ import PostTags from "./PostTags.js" ;
 import List from "./List.js" ;
 import { formatDate } from "../helpers/formatDate.js" ;
 
-const Item = styled.li`
+const Card = styled.li`
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
-  background-color: ${props => props.theme.background};
+  background-color: ${props => props.theme.backgroundHighlight};
   img {
     width: 100%;
   }
@@ -44,7 +44,7 @@ const PostList = ({ posts, columns }) => {
     <List columns={columns}>
       {posts.map(({node: post}) => {
         return (
-          <Item className="post" key={post.id}>
+          <Card className="post" key={post.id}>
             <Link to={post.fields.slug}> 
               <Img 
                 style={{backgroundColor: post.frontmatter.color}}
@@ -56,7 +56,7 @@ const PostList = ({ posts, columns }) => {
                 <PostTitle>{post.frontmatter.title}</PostTitle>
               </PostContent>
             </Link>
-          </Item>
+          </Card>
         )
       })}
     </List>

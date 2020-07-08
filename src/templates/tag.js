@@ -4,7 +4,8 @@ import { graphql } from "gatsby" ;
 import _ from "lodash" ;
 
 import Layout from "../components/Layout.js" ;
-import Container from "../components/Container.js";
+import { PageHeader, HeaderTitle, HeaderIntro } from "../components/PageHeader.js";
+import { Section, SectionTitle } from "../components/Section.js" ;
 import PostList from "../components/PostList.js" ;
 
 const Tag = ({ data, pageContext }) => {
@@ -15,14 +16,23 @@ const Tag = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <Container>
-        <Helmet title={capitalizedTag} /> 
-        <h1>{capitalizedTag}</h1>
+      <Helmet title={capitalizedTag} /> 
+
+      <PageHeader>
+        <HeaderTitle>
+          {capitalizedTag}
+        </HeaderTitle>
+        <HeaderIntro>
+          {`${posts.length} posts trouvé${posts.length > 1 ? "s" : ""} `}
+        </HeaderIntro>
+      </PageHeader>
+
+      <Section>
         <PostList 
           posts={posts} 
-          columns={2}
+          columns={3}
         />
-      </Container>
+      </Section>
     </Layout>
   )
 

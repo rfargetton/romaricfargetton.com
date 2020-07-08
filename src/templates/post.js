@@ -16,23 +16,21 @@ const Post = ({ data }) => {
 
   return (
     <Layout>
-      <Container>
-        <Helmet title={post.frontmatter.title} /> 
-        <article>
-          <PostHeader
-            image={post.frontmatter.featured_image.childImageSharp.fluid}
-            color={post.frontmatter.color}
-            alt="random"
-          >
-            <HeaderTitle>{post.frontmatter.title}</HeaderTitle>
-            <HeaderInfo>Publié le <time dateTime={date}>{formatDate(date)}</time> | {post.timeToRead} min</HeaderInfo>
-            <PostTags tags={post.frontmatter.tags} />
-          </PostHeader>
-          <Content>
-            <div dangerouslySetInnerHTML={{ __html : post.html }} />
-          </Content>
-        </article>
-      </Container>
+      <Helmet title={post.frontmatter.title} /> 
+      <article>
+        <PostHeader
+          image={post.frontmatter.featured_image.childImageSharp.fluid}
+          color={post.frontmatter.color}
+          alt="random"
+        >
+          <HeaderTitle>{post.frontmatter.title}</HeaderTitle>
+          <HeaderInfo>Publié le <time dateTime={date}>{formatDate(date)}</time> | {post.timeToRead} min</HeaderInfo>
+          <PostTags tags={post.frontmatter.tags} />
+        </PostHeader>
+        <Content>
+          <div dangerouslySetInnerHTML={{ __html : post.html }} />
+        </Content>
+      </article>
     </Layout>
   )
 }

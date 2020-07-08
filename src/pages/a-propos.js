@@ -4,6 +4,7 @@ import { graphql } from "gatsby" ;
 
 import Layout from "../components/Layout.js" ;
 import { PageHeader, HeaderTitle, HeaderIntro } from "../components/PageHeader.js";
+import Content from "../components/Content.js" ;
 
 const About = ({ data }) => {
 
@@ -22,6 +23,9 @@ const About = ({ data }) => {
           {page.frontmatter.subheading}
         </HeaderIntro>
       </PageHeader>
+
+      <Content>
+      </Content>
 
     </Layout>
   )

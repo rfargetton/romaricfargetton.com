@@ -4,8 +4,12 @@ import { GitHub, Linkedin, Mail } from "react-feather" ;
 
 import useSocialLinks from '../hooks/SocialLinks' ;
 import Container from "./Container.js" ;
-import { Section } from "../components/Section.js" ;
 
+const Wrapper = styled.section`
+  padding-bottom: 3rem;
+  padding-top: 10rem;
+  background-color: ${props => props.theme.backgroundHighlight};
+`
 const Inner = styled(Container)`
   display: flex;
   align-items: center;
@@ -28,13 +32,13 @@ export const HeaderTitle = styled.h1`
 export const PageHeader = ({ children }) => {
   
   return (
-    <Section>
+    <Wrapper>
       <Inner>
         <HeaderTxt>
           {children}
         </HeaderTxt>
       </Inner>
-    </Section>
+    </Wrapper>
   )
 
 }

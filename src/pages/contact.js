@@ -1,9 +1,11 @@
 import React from "react" ;
+import styled from "styled-components";
 import { Helmet } from "react-helmet" ;
 import { graphql } from "gatsby" ;
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
 import Layout from "../components/Layout.js" ;
+import Button from "../components/Button.js" ;
 import { PageHeader, HeaderTitle, HeaderIntro } from "../components/PageHeader.js";
 import Content from "../components/Content.js" ;
 
@@ -12,6 +14,26 @@ const urlEncode = (data) => {
     return `${encodeURIComponent(entry[0])}=${encodeURIComponent(entry[1])}` ;
   }).join("&");
 }
+
+const ContactForm = styled.form`
+`
+const FieldGroup = styled.div`
+  margin-bottom: 1rem;
+  input, textarea {
+    font-family: Inter, sans-serif;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: ${props => props.theme.backgroundHighlight} ;
+    color: ${props => props.theme.link} ;
+    display: block;
+    width: calc(100% - 2rem );
+  }
+  label {
+    margin: 0.5rem 0;
+    display: block;
+`
 const Contact = ({ data }) => {
 
   const page = data.page ;
@@ -33,14 +55,10 @@ const Contact = ({ data }) => {
       <Content>
         <Formik
           initialValues={{ 
-
             email: "",
             message: ""
-
           }}
           onSubmit={(values, actions) => {
-
-            console.log(urlEncode(values));
             fetch("/", {
               method: "POST",
               headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -54,10 +72,8 @@ const Contact = ({ data }) => {
               alert("Error");
             })
             .finally(() => actions.setSubmitting(false));
-
           }}
           validate={(values) => {
-              
             const emailRegex = /[A-Z0-9%+-_]+@[A-Z0-9.-]+\.[A-Z0-9]+/i ;
             const errors = {};
             if(!values.email){
@@ -68,23 +84,25 @@ const Contact = ({ data }) => {
             if(!values.message){
               errors.message = "Message is required";
             }
-            
             return errors ;
-
           }}
         >
           {() => (
-            <Form n name="contact-form" data-netlify={true}>
-              <label htmlFor="email">Email</label>
-              <Field name="email" placeholder="Votre email" />
-              <ErrorMessage name="email"/>
+            <ContactForm name="contact-form" data-netlify={true}>
+              <FieldGroup>
+                <label htmlFor="email">Email</label>
+                <Field name="email" placeholder="Votre email" />
+                <ErrorMessage name="email"/>
+              </FieldGroup>
 
-              <label htmlFor="email">Message</label>
-              <Field name="message" component="textarea" placeholder="Votre message"/>
-              <ErrorMessage name="message"/>
+              <FieldGroup>
+                <label htmlFor="email">Message</label>
+                <Field name="message" component="textarea" placeholder="Votre message"/>
+                <ErrorMessage name="message"/>
+              </FieldGroup>
 
-              <button type="submit">Envoyer</button>
-            </Form>
+              <Button type="submit"><span>Envoyer</span></Button>
+            </ContactForm>
           )}
         </Formik>
       </Content>
