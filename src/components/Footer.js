@@ -2,6 +2,7 @@ import React from 'react' ;
 import { Link } from 'gatsby' ;
 import styled from "styled-components" ;
 
+import Logo from './Logo.js' ;
 import useSiteMetadata from '../hooks/SiteMetadata' ;
 import useSocialLinks from '../hooks/SocialLinks' ;
 import Container from "./Container.js" ;
@@ -11,15 +12,35 @@ const FooterWrapper = styled.footer`
 `
 const Inner = styled(Container)`
   display: flex;
+  flex-wrap: wrap;
+  a {
+    color: ${props => props.theme.text};
+  }
 `
-const Brand = styled.div`
-  flex-basis: 50%;
+const Top = styled.div`
+  margin-bottom: 1rem;
+  flex-basis: 100%;
+  flex-shrink: 0;
 `
-const FooterNav = styled.div`
-  flex-basis: 25%
+const Title = styled.div`
+  margin-bottom: 1rem;
+  color: ${props => props.theme.link};
 `
-const FooterSocial = styled.div`
-  flex-basis: 25%;
+
+const FooterInfo = styled.div`
+  margin-right: 2rem;
+  flex-grow: 1;
+`
+
+const FooterNav = styled.nav`
+  ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: -0.5rem;
+  }
+  li {
+    margin: 0.5rem;
+  }
 `
 
 const Footer = () => {
@@ -31,23 +52,19 @@ const Footer = () => {
     <FooterWrapper>
 
       <Inner>
-        <Brand>
-          <Link to="/">
-            { title }
-          </Link>
-        </Brand>
+        <Top>
+          <Logo width={"40"} />
+        </Top>
+
+        <FooterInfo>
+          <Title>{ title }</Title>
+        </FooterInfo>
 
         <FooterNav>
           <ul>
-            <li><Link to="/">Blog</Link></li>
+            <li><Link to="/blog">Blog</Link></li>
             <li><Link to="/a-propos">À Propos</Link></li>
             <li><Link to="/contact">Contact</Link></li>
-          </ul>
-        </FooterNav>
-
-        <FooterSocial>
-          <ul>
-
             <li>
               <a href={email.frontmatter.link}>
                 {email.frontmatter.title}
@@ -65,9 +82,8 @@ const Footer = () => {
                 {linkedin.frontmatter.title}
               </a>
             </li>
-
           </ul>
-        </FooterSocial>
+        </FooterNav>
 
       </Inner>
 

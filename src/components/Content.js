@@ -10,6 +10,9 @@ const ContentWrapper = styled(SectionWrapper)`
 const ContentBox = styled(Container)`
   > div {
     max-width: 65%;
+    @media (max-width: 780px) {
+      max-width: 100%;
+    }
   }
   h1 {
     font-size: 2rem;

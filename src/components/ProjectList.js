@@ -17,7 +17,7 @@ const Project = styled.li`
 `
 const Links = styled.div`
   display: flex;
-  margin: 2rem 0;
+  margin-top: 2rem;
   button {
     margin-right: 1rem;
   }

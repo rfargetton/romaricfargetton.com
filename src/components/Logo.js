@@ -3,7 +3,7 @@ import styled from "styled-components" ;
 
 const Path = styled.path`
   fill: none;
-  stroke: ${props => props.theme.text};
+  stroke: ${props => props.theme.link};
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 3px;
@@ -11,7 +11,7 @@ const Path = styled.path`
 
 const Line = styled.line`
   fill: none;
-  stroke: ${props => props.theme.text};
+  stroke: ${props => props.theme.number};
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 3px;

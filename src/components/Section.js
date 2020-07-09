@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   color: ${props => props.theme.secondary};
+  margin-bottom: 3rem;
 `
 const Line = styled.div`
   height: 3px;

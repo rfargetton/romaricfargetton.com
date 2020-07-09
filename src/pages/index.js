@@ -33,9 +33,6 @@ const Home = ({ data }) => {
       </HomeHeader>
 
       <Section>
-        <SectionTitle>
-          <h2>Services</h2>
-        </SectionTitle>
         <ServiceList 
           columns={4}
         /> 

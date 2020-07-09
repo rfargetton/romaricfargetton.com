@@ -5,7 +5,9 @@ const List = styled.ul`
   display: grid;
   grid-template-columns: repeat(${props => props.columns}, 1fr);
   grid-gap: 1rem;
-  margin-top: 6rem;
+  @media (max-width: 780px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `
 
 export default List ;

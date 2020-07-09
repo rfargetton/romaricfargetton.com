@@ -18,9 +18,9 @@ const GlobalStyles = createGlobalStyle`
   ul, ol {
     list-style: none;
     padding: 0;
-    margin: 1rem 0;
+    margin: 0;
     li {
-      margin: 0.5rem 0;
+      margin: 0;
     }
   }
   main {
