@@ -14,7 +14,7 @@ const Inner = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between; 
-  @media (max-width: 780px) {
+  @media (max-width: 768px) {
     flex-flow: column-reverse wrap;
     align-items: flex-start;
   }
@@ -26,14 +26,14 @@ const HeaderImg = styled.div`
     width: 100%;
     border-radius: 50%;
   }
-  @media (max-width: 780px){
+  @media (max-width: 768px){
     margin-bottom: 2rem;
     width: 10rem;
   }
 `
 const HeaderTxt =  styled.div`
   flex: 0 0 65%;
-  @media (max-width: 780px){
+  @media (max-width: 768px){
     flex: 1 1 65%;
   }
 `

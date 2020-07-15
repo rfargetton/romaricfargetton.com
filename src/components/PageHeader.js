@@ -17,7 +17,7 @@ const Inner = styled(Container)`
 `
 const HeaderTxt =  styled.div`
   flex: 0 0 65%;
-  @media (max-width: 780px){
+  @media (max-width: 768px){
     flex: 1 1 65%;
   }
 `

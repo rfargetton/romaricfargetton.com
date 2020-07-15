@@ -13,7 +13,7 @@ const Inner = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between; 
-  @media (max-width: 780px) {
+  @media (max-width: 768px) {
     flex-flow: column-reverse wrap;
     align-items: flex-start;
   }
@@ -27,7 +27,7 @@ const HeaderImg = styled.div`
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.25);
     background-color: ${props => props.color};
   }
-  @media (max-width: 780px){
+  @media (max-width: 768px){
     margin-bottom: 2rem;
     width: 10rem;
   }

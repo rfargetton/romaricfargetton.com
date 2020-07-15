@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components" ;
 const GlobalStyles = createGlobalStyle`
   html {
     font-size: 16px;
-    @media (max-width: 780px) {
+    @media (max-width: 768px) {
       font-size: 14px;
     }
   }

@@ -54,7 +54,7 @@ export const query = graphql`
             date
             featured_image {
               childImageSharp {
-                fluid(maxHeight: 300, maxWidth: 400, quality: 90) {
+                fluid(maxHeight: 300, maxWidth: 400, cropFocus: CENTER, quality: 90) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
