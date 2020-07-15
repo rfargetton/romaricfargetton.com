@@ -7,23 +7,35 @@ import Container from "./Container.js" ;
 
 const Wrapper = styled.section`
   padding-bottom: 3rem;
-  padding-top: 10rem;
+  padding-top: 8rem;
   background-color: ${props => props.theme.backgroundHighlight};
 `
 const Inner = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between; 
+  @media (max-width: 780px) {
+    flex-flow: column-reverse wrap;
+    align-items: flex-start;
+  }
 `
 const HeaderImg = styled.div`
-  flex-basis: 25%;
+  flex: 0 0 auto;
+  width: 15rem;
   img {
     width: 100%;
     border-radius: 50%;
   }
+  @media (max-width: 780px){
+    margin-bottom: 2rem;
+    width: 10rem;
+  }
 `
 const HeaderTxt =  styled.div`
-  flex-basis: 65%;
+  flex: 0 0 65%;
+  @media (max-width: 780px){
+    flex: 1 1 65%;
+  }
 `
 const SocialBar = styled.div`
   display: flex;
@@ -42,12 +54,12 @@ const SocialBar = styled.div`
   }
 `
 export const HeaderIntro = styled.p`
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   line-height: 1.5;
   margin: 2rem 0;
 `
 export const HeaderTitle = styled.h1`
-  font-size: 2.25rem;
+  font-size: 2rem;
   line-height: 1.3;
   margin: 0;
 `

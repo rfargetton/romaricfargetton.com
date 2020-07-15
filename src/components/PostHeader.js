@@ -6,21 +6,30 @@ import Container from "./Container.js" ;
 
 const Wrapper = styled.header`
   padding-bottom: 3rem;
-  padding-top: 10rem;
+  padding-top: 8rem;
   background-color: ${props => props.theme.backgroundHighlight};
 `
 const Inner = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between; 
+  @media (max-width: 780px) {
+    flex-flow: column-reverse wrap;
+    align-items: flex-start;
+  }
 `
 const HeaderImg = styled.div`
-  flex-basis: 25%;
+  flex: 0 0 auto;
+  width: 15rem;
   div {
     width: 100%;
     border-radius: 50%;
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.25);
     background-color: ${props => props.color};
+  }
+  @media (max-width: 780px){
+    margin-bottom: 2rem;
+    width: 10rem;
   }
 `
 const HeaderTxt =  styled.div`
@@ -31,7 +40,7 @@ export const HeaderInfo = styled.div`
   margin: 1rem 0;
 `
 export const HeaderTitle = styled.h1`
-  font-size: 2.25rem;
+  font-size: 2rem;
   line-height: 1.3;
   margin: 0;
 `

@@ -56,9 +56,15 @@ const NavLink = styled(Link).attrs({activeClassName})`
   &.${activeClassName}{
     background-color: ${props => props.theme.background};
   }
+  @media (max-width: 780px){
+    margin: 0;
+  }
 `;
 const CTA = styled.div`
   margin-left: 1rem;
+  @media (max-width: 780px){
+    display: none;
+  }
 `
 const ThemeButton = styled(Button)`
   background-color: ${props => props.theme.background};

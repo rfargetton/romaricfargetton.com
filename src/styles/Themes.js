@@ -42,6 +42,7 @@ const Themes = {
   dark: {
     name: "dark",
     background: nord[0],
+    backgroundDark: darken(0.02, nord[0]),
     backgroundHighlight: nord[1],
     backgroundCodeblock: nord[1],
     text: nord[6],

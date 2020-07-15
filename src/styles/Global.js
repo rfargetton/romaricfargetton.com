@@ -1,6 +1,12 @@
 import { createGlobalStyle } from "styled-components" ;
 
 const GlobalStyles = createGlobalStyle`
+  html {
+    font-size: 16px;
+    @media (max-width: 780px) {
+      font-size: 14px;
+    }
+  }
   body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;

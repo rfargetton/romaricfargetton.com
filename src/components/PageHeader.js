@@ -7,7 +7,7 @@ import Container from "./Container.js" ;
 
 const Wrapper = styled.section`
   padding-bottom: 3rem;
-  padding-top: 10rem;
+  padding-top: 8rem;
   background-color: ${props => props.theme.backgroundHighlight};
 `
 const Inner = styled(Container)`
@@ -16,10 +16,13 @@ const Inner = styled(Container)`
   justify-content: space-between; 
 `
 const HeaderTxt =  styled.div`
-  flex-basis: 65%;
+  flex: 0 0 65%;
+  @media (max-width: 780px){
+    flex: 1 1 65%;
+  }
 `
 export const HeaderIntro = styled.p`
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   line-height: 1.5;
   margin: 2rem 0;
 `
