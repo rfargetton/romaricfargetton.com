@@ -8,16 +8,25 @@ import Button from "./Button.js" ;
 import List from "./List.js" ;
 
 const ProjectImg = styled(Img)`
+`
+const ProjectContent = styled.div`
+  padding: 1rem;
+  p {
+    margin: 1rem 0;
+  }
+`
+const Card = styled.li`
   border-radius: 8px;
-`
-const ProjectTitle = styled.h3`
-  margin: 2rem 0;
-`
-const Project = styled.li`
+  overflow: hidden;
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
+  background-color: ${props => props.theme.backgroundHighlight};
+  img {
+    width: 100%;
+  }
 `
 const Links = styled.div`
+  padding: 1rem;
   display: flex;
-  margin-top: 2rem;
   button {
     margin-right: 1rem;
   }
@@ -28,10 +37,12 @@ const ProjectList = ({ projects, columns }) => {
     <List columns={columns}>
       {projects.map(({node: project}) => {
         return (
-          <Project key={project.id}>
+          <Card key={project.id}>
             <ProjectImg fluid={project.frontmatter.featured_image.childImageSharp.fluid} />
-            <ProjectTitle>{project.frontmatter.title}</ProjectTitle>
-            <div dangerouslySetInnerHTML={{ __html: project.html }} />
+            <ProjectContent>
+              <h3>{project.frontmatter.title}</h3>
+              <p dangerouslySetInnerHTML={{ __html: project.html }} />
+            </ProjectContent>
             <Links>
               <Button>
                 <a 
@@ -55,7 +66,7 @@ const ProjectList = ({ projects, columns }) => {
               </Button>
             </Links>
 
-          </Project>
+          </Card>
         )
       })}
     </List>

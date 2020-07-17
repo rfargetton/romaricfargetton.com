@@ -27,6 +27,7 @@ const Themes = {
   light: {
     name: "light",
     background: nord[5],
+    backgroundDark: nord[0],
     backgroundHighlight: nord[6],
     backgroundCodeblock: nord[1],
     text: nord[0],
@@ -42,7 +43,7 @@ const Themes = {
   dark: {
     name: "dark",
     background: nord[0],
-    backgroundDark: darken(0.02, nord[0]),
+    backgroundDark: darken(0.1, nord[0]),
     backgroundHighlight: nord[1],
     backgroundCodeblock: nord[1],
     text: nord[6],

@@ -10,7 +10,7 @@ import Button from "./Button.js" ;
 import useSiteMetadata from '../hooks/SiteMetadata' ;
 
 const Nav = styled.nav`
-  background-color: ${props => props.theme.backgroundHighlight};
+  background-color: ${props => props.theme.backgroundDark};
   position: fixed;
   width: 100%;
   top: 0;
@@ -22,6 +22,10 @@ const Wrapper = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 2rem;
+  @media (max-width: 768px){
+    padding: 0 1rem;
+  }
 `;
 
 const Brand = styled.div`
@@ -48,13 +52,13 @@ const NavLink = styled(Link).attrs({activeClassName})`
   padding: 0.5rem;
   margin: 0.5rem;
   border-radius: 8px;
-  color: ${props => props.theme.text} ;
+  color: white;
   &:hover {
-    background-color: ${props => props.theme.background};
+    background-color: ${props => props.theme.backgroundCodeblock};
     color: ${props => props.theme.link};
   }
   &.${activeClassName}{
-    background-color: ${props => props.theme.background};
+    background-color: ${props => props.theme.backgroundCodeblock};
   }
   @media (max-width: 768px){
     margin: 0;

@@ -13,6 +13,10 @@ const FooterWrapper = styled.footer`
 const Inner = styled(Container)`
   display: flex;
   flex-wrap: wrap;
+  padding: 0 2rem;
+  @media (max-width: 768px){
+    padding: 0 1rem;
+  }
   a {
     color: ${props => props.theme.text};
   }

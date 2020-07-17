@@ -10,6 +10,7 @@ import { formatDate } from "../helpers/formatDate.js" ;
 
 const Card = styled.li`
   border-radius: 8px;
+  position: relative;
   overflow: hidden;
   box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
   background-color: ${props => props.theme.backgroundHighlight};
@@ -27,11 +28,21 @@ const PostContent = styled.div`
   }
 `
 const PostTitle = styled.h3`
-  margin: 2rem 0;
-  font-size: 1.5rem;
+  margin-bottom: 2rem ;
+  font-size: 1.25rem;
+  a::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 `
 const Tags = styled(PostTags)`
   transform: translateY(-30px);
+  z-index: 1;
+  position: relative;
 `
 const Read = styled(Button)`
   background-color: ${props => props.theme.background};
@@ -39,23 +50,24 @@ const Read = styled(Button)`
 
 const PostList = ({ posts, columns }) => {
 
-  console.log(posts);
   return (
     <List columns={columns}>
       {posts.map(({node: post}) => {
         return (
           <Card className="post" key={post.id}>
-            <Link to={post.fields.slug}> 
               <Img 
                 style={{backgroundColor: post.frontmatter.color}}
                 fluid={post.frontmatter.featured_image.childImageSharp.fluid} 
               />
               <PostContent>
                 <Tags tags={post.frontmatter.tags} />
-                <div>Publié le {formatDate(post.frontmatter.date)} | {post.timeToRead} minutes</div>
-                <PostTitle>{post.frontmatter.title}</PostTitle>
+                  <PostTitle>
+                    <Link to={post.fields.slug}> 
+                      {post.frontmatter.title}
+                    </Link>
+                  </PostTitle>
+                  <div>Publié le {formatDate(post.frontmatter.date)} | {post.timeToRead} minutes</div>
               </PostContent>
-            </Link>
           </Card>
         )
       })}

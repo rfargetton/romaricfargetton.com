@@ -52,6 +52,7 @@ export const query = graphql`
           }
           frontmatter {
             title
+            color
             featured_image {
               childImageSharp {
                 fluid(maxHeight: 300, maxWidth: 400) {

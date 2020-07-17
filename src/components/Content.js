@@ -10,6 +10,7 @@ const ContentWrapper = styled(SectionWrapper)`
 const ContentBox = styled(Container)`
   > div {
     max-width: 65%;
+    box-sizing: border-box;
     @media (max-width: 780px) {
       max-width: 100%;
     }

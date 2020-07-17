@@ -6,28 +6,36 @@ import useSocialLinks from '../hooks/SocialLinks' ;
 import Container from "./Container.js" ;
 
 const Wrapper = styled.section`
-  padding-bottom: 3rem;
   padding-top: 8rem;
-  background-color: ${props => props.theme.backgroundHighlight};
+  position: relative;
+  z-index: 2;
 `
 const Inner = styled(Container)`
+  min-height: 240px;
   display: flex;
+  box-sizing: border-box;
+  border-radius: 8px;
   align-items: center;
   justify-content: space-between; 
+  padding: 2rem;
+  background-color: ${props => props.theme.backgroundHighlight};
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
   @media (max-width: 768px) {
     flex-flow: column-reverse wrap;
     align-items: flex-start;
+    padding: 1rem;
   }
 `
 const HeaderImg = styled.div`
   flex: 0 0 auto;
   width: 15rem;
+  margin-bottom: -20px;
   img {
     width: 100%;
     border-radius: 50%;
   }
   @media (max-width: 768px){
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     width: 10rem;
   }
 `
@@ -77,7 +85,7 @@ export const HomeHeader = ({ children, image, alt }) => {
         <HeaderImg>
           <img src={image} alt={alt} />
           <SocialBar>
-              <a 
+              <a
                 href={github.frontmatter.link}
                 target="_blank"
                 rel="noreferrer"

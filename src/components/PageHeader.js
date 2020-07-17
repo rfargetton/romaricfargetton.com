@@ -6,14 +6,20 @@ import useSocialLinks from '../hooks/SocialLinks' ;
 import Container from "./Container.js" ;
 
 const Wrapper = styled.section`
-  padding-bottom: 3rem;
   padding-top: 8rem;
-  background-color: ${props => props.theme.backgroundHighlight};
+  position: relative;
+  z-index: 2;
 `
 const Inner = styled(Container)`
+  min-height: 240px;
   display: flex;
+  box-sizing: border-box;
+  border-radius: 8px;
   align-items: center;
   justify-content: space-between; 
+  padding: 2rem;
+  background-color: ${props => props.theme.backgroundHighlight};
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
 `
 const HeaderTxt =  styled.div`
   flex: 0 0 65%;
@@ -24,7 +30,7 @@ const HeaderTxt =  styled.div`
 export const HeaderIntro = styled.p`
   font-size: 1.15rem;
   line-height: 1.5;
-  margin: 2rem 0;
+  margin-top: 2rem;
 `
 export const HeaderTitle = styled.h1`
   font-size: 2.25rem;
