@@ -26,13 +26,13 @@ const nord = {
 const Themes = {
   light: {
     name: "light",
-    background: nord[5],
+    background: nord[4],
     backgroundDark: nord[0],
     backgroundHighlight: nord[6],
     backgroundCodeblock: nord[1],
     text: nord[0],
     code: nord[6],
-    secondary: nord[4],
+    secondary: nord[3],
     link: nord[10],
     string: nord[14],
     number: nord[15],

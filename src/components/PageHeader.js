@@ -20,6 +20,9 @@ const Inner = styled(Container)`
   padding: 2rem;
   background-color: ${props => props.theme.backgroundHighlight};
   box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
 `
 const HeaderTxt =  styled.div`
   flex: 0 0 65%;

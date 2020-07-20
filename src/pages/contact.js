@@ -111,41 +111,41 @@ const Contact = ({ data }) => {
       <Content>
         <FlexWrapper>
           <FormCard>
-          <Formik
-            initialValues={{ 
-              email: "",
-              message: ""
-            }}
-            onSubmit={(values, actions) => {
-              fetch("/", {
-                method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: urlEncode({ "form-name": "contact-form", ...values }) 
-              })
-              .then(() => {
-                alert("Success");
-                actions.resetForm();
-              })
-              .catch(() => {
-                alert("Error");
-              })
-              .finally(() => actions.setSubmitting(false));
-            }}
-            validate={(values) => {
-              const emailRegex = /[A-Z0-9%+-_]+@[A-Z0-9.-]+\.[A-Z0-9]+/i ;
-              const errors = {};
-              if(!values.email){
-                errors.email = "Veuillez compléter ce champ";
-              } else if ( !emailRegex.test(values.email) ) {
-                errors.email = "Veuillez entrer une adresse email correcte" ;
-              }  
-              if(!values.message){
-                errors.message = "Veuillez compléter ce champ";
-              }
-              return errors ;
-            }}
-          >
-            {({errors, touched}) => (
+            <Formik
+              initialValues={{ 
+                email: "",
+                message: ""
+              }}
+              onSubmit={(values, actions) => {
+                fetch("/", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                  body: urlEncode({ "form-name": "contact-form", ...values }) 
+                })
+                .then(() => {
+                  alert("Votre message a bien été transmis. Merci !");
+                  actions.resetForm();
+                })
+                .catch(() => {
+                  alert("Il y a eu une erreur lors de la transmission du message. Merci de réessayer.");
+                })
+                .finally(() => actions.setSubmitting(false));
+              }}
+              validate={(values) => {
+                const emailRegex = /[A-Z0-9%+-_]+@[A-Z0-9.-]+\.[A-Z0-9]+/i ;
+                const errors = {};
+                if(!values.email){
+                  errors.email = "Veuillez compléter ce champ";
+                } else if ( !emailRegex.test(values.email) ) {
+                  errors.email = "Veuillez entrer une adresse email correcte" ;
+                }  
+                if(!values.message){
+                  errors.message = "Veuillez compléter ce champ";
+                }
+                return errors ;
+              }}
+            >
+              {({errors, touched}) => (
                 <Form name="contact-form" data-netlify="true">
                   <input type="hidden" name="form-name" value="contact-form" />
                   <FieldGroup>
@@ -162,9 +162,9 @@ const Contact = ({ data }) => {
 
                   <Button type="submit"><span>Envoyer</span></Button>
                 </Form>
-            )}
-          </Formik>
-        </FormCard>
+              )}
+            </Formik>
+          </FormCard>
 
           <ContactList>
             <h2>Réseaux et mail</h2>
