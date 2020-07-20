@@ -155,7 +155,7 @@ const Contact = ({ data }) => {
                   </FieldGroup>
 
                   <FieldGroup>
-                    <label htmlFor="email">Message</label>
+                    <label htmlFor="message">Message</label>
                     <Field name="message" component="textarea" placeholder="Votre message"/>
                     {errors.message && touched.message ? <StyledErrorMessage>{errors.message}</StyledErrorMessage> :  null}
                   </FieldGroup>
