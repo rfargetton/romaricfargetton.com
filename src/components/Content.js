@@ -8,13 +8,6 @@ const ContentWrapper = styled(SectionWrapper)`
   padding: 2rem 0;
 `
 const ContentBox = styled(Container)`
-  > div {
-    max-width: 65%;
-    box-sizing: border-box;
-    @media (max-width: 780px) {
-      max-width: 100%;
-    }
-  }
   h1 {
     font-size: 2rem;
   }
@@ -97,9 +90,11 @@ const ContentBox = styled(Container)`
   }
 `
 
-const Content = ({ children }) => {
+const Content = ({ children, className }) => {
   return (
-    <ContentWrapper>
+    <ContentWrapper
+      className={className}
+    >
       <ContentBox>
         {children}
       </ContentBox>

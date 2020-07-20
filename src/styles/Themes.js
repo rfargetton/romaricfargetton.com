@@ -31,14 +31,15 @@ const Themes = {
     backgroundHighlight: nord[6],
     backgroundCodeblock: nord[1],
     text: nord[0],
-    comment: nord[3],
-    link: nord[10],
     code: nord[6],
+    secondary: nord[4],
+    link: nord[10],
     string: nord[14],
     number: nord[15],
     function: nord[8],
     keyword: nord[9],
     comment: nord[3],
+    error: nord[11],
   },
   dark: {
     name: "dark",
@@ -55,6 +56,7 @@ const Themes = {
     function: nord[8],
     keyword: nord[9],
     comment: nord[3],
+    error: nord[11],
   }
 }
 

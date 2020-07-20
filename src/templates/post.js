@@ -1,4 +1,5 @@
 import React from "react" ;
+import styled from "styled-components";
 import { Helmet } from "react-helmet" ;
 import { graphql } from "gatsby" ;
 
@@ -8,6 +9,14 @@ import PostTags from "../components/PostTags.js" ;
 import { PostHeader, HeaderInfo, HeaderTitle } from "../components/PostHeader.js";
 import Content from "../components/Content.js" ;
 import { formatDate } from "../helpers/formatDate.js" ;
+
+const Body = styled.div`
+  max-width: 65%;
+  box-sizing: border-box;
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+`
 
 const Post = ({ data }) => {
 
@@ -28,7 +37,7 @@ const Post = ({ data }) => {
           <PostTags tags={post.frontmatter.tags} />
         </PostHeader>
         <Content>
-          <div dangerouslySetInnerHTML={{ __html : post.html }} />
+          <Body dangerouslySetInnerHTML={{ __html : post.html }} />
         </Content>
       </article>
     </Layout>
