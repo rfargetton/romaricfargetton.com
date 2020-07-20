@@ -110,6 +110,7 @@ const Contact = ({ data }) => {
 
       <Content>
         <FlexWrapper>
+          <FormCard>
           <Formik
             initialValues={{ 
               email: "",
@@ -142,12 +143,11 @@ const Contact = ({ data }) => {
                 errors.message = "Veuillez compléter ce champ";
               }
               return errors ;
-              console.log(errors);
             }}
           >
             {({errors, touched}) => (
-              <FormCard>
-                <ContactForm name="contact-form" data-netlify={true}>
+                <Form name="contact-form" data-netlify="true">
+                  <input type="hidden" name="form-name" value="contact-form" />
                   <FieldGroup>
                     <label htmlFor="email">Email</label>
                     <Field name="email" placeholder="Votre email" />
@@ -161,10 +161,10 @@ const Contact = ({ data }) => {
                   </FieldGroup>
 
                   <Button type="submit"><span>Envoyer</span></Button>
-                </ContactForm>
-              </FormCard>
+                </Form>
             )}
           </Formik>
+        </FormCard>
 
           <ContactList>
             <h2>Réseaux et mail</h2>
