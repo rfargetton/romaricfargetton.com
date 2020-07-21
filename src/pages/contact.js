@@ -35,22 +35,19 @@ const FormCard = styled(Card)`
     margin-bottom: 2rem;
   }
 `
-const CustomField = styled.input`
-  color: red;
+const CustomField = styled(Field)`
+  border: 1px solid ${props => props.error ? props.theme.error : props.theme.background};
+  font-family: Inter, sans-serif;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: ${props => props.theme.background} ;
+  color: ${props => props.theme.link} ;
+  display: block;
+  width: calc(100% - 2rem);
 `
 const FieldGroup = styled.div`
   margin-bottom: 1rem;
-  input, textarea {
-    font-family: Inter, sans-serif;
-    border: none;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    font-size: 1rem;
-    background-color: ${props => props.theme.background} ;
-    color: ${props => props.theme.link} ;
-    display: block;
-    width: calc(100% - 2rem);
-  }
   label {
     margin: 0.5rem 0;
     display: block;
@@ -150,13 +147,13 @@ const Contact = ({ data }) => {
                   <input type="hidden" name="form-name" value="contact-form" />
                   <FieldGroup>
                     <label htmlFor="email">Email</label>
-                    <Field name="email" placeholder="Votre email" />
+                    <CustomField error={errors.email && touched.email} name="email" placeholder="Votre email" />
                     {errors.email && touched.email ? <StyledErrorMessage>{errors.email}</StyledErrorMessage> :  null}
                   </FieldGroup>
 
                   <FieldGroup>
                     <label htmlFor="message">Message</label>
-                    <Field name="message" component="textarea" placeholder="Votre message"/>
+                    <CustomField error={errors.message && touched.message} name="message" component="textarea" placeholder="Votre message"/>
                     {errors.message && touched.message ? <StyledErrorMessage>{errors.message}</StyledErrorMessage> :  null}
                   </FieldGroup>
 
