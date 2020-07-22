@@ -2,4 +2,4 @@
 title: Développement Web
 type: service
 ---
-Développement de sites web sous des frameworks JavaScript, WordPress
+Réalisation de sites et applications utilisant les langages du web (HTML, CSS, JavaScript), notamment grâce à des librairies comme **React**.
