@@ -41,7 +41,7 @@ const ProjectList = ({ projects, columns }) => {
             <ProjectImg fluid={project.frontmatter.featured_image.childImageSharp.fluid} />
             <ProjectContent>
               <h3>{project.frontmatter.title}</h3>
-              <p dangerouslySetInnerHTML={{ __html: project.html }} />
+              <div dangerouslySetInnerHTML={{ __html: project.html }} />
             </ProjectContent>
             <Links>
               <Button>
