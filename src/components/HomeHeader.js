@@ -1,4 +1,5 @@
 import React from "react" ;
+import Img from "gatsby-image" ;
 import styled from "styled-components";
 import { GitHub, Linkedin, Mail } from "react-feather" ;
 
@@ -7,6 +8,7 @@ import Container from "./Container.js" ;
 
 const Wrapper = styled.section`
   padding-top: 8rem;
+  padding-bottom: 3rem;
   position: relative;
   z-index: 2;
 `
@@ -30,9 +32,10 @@ const HeaderImg = styled.div`
   flex: 0 0 auto;
   width: 15rem;
   margin-bottom: -20px;
-  img {
+  .gatsby-image-wrapper {
     width: 100%;
     border-radius: 50%;
+    background-color: ${props => props.color};
   }
   @media (max-width: 768px){
     margin-bottom: 1rem;
@@ -83,7 +86,7 @@ export const HomeHeader = ({ children, image, alt }) => {
           {children}
         </HeaderTxt>
         <HeaderImg>
-          <img src={image} alt={alt} />
+          <Img fluid={image} />
           <SocialBar>
               <a
                 href={github.frontmatter.link}

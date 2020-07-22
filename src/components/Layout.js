@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
       <GlobalStyles />
       <Helmet
         titleTemplate={ " %s  — " + title }
-        defaultTitle={title + " — Frontend Developer " }
+        defaultTitle={title + " — Développeur Front-end " }
       >
         <html lang="fr" />
         <meta name="description" content={description} />

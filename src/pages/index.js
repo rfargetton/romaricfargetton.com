@@ -22,7 +22,7 @@ const Home = ({ data }) => {
     <Layout>
 
       <HomeHeader 
-        image={avatar} 
+        image={page.frontmatter.avatar.childImageSharp.fluid} 
         alt="romaric"
       >
         <HeaderTitle>{page.frontmatter.heading}</HeaderTitle>
@@ -124,6 +124,13 @@ export const query = graphql`
       frontmatter {
         heading
         subheading
+        avatar {
+          childImageSharp {
+            fluid(maxHeight: 400, maxWidth: 400, cropFocus: CENTER, quality: 90) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
       }
     }
   }

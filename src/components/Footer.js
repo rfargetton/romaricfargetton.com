@@ -8,7 +8,9 @@ import useSocialLinks from '../hooks/SocialLinks' ;
 import Container from "./Container.js" ;
 
 const FooterWrapper = styled.footer`
+  background-color: ${props => props.theme.backgroundDark};
   padding: 6rem 0;
+  margin-top: 6rem;
 `
 const Inner = styled(Container)`
   display: flex;
@@ -18,7 +20,7 @@ const Inner = styled(Container)`
     padding: 0 1rem;
   }
   a {
-    color: ${props => props.theme.text};
+    color: white;
   }
 `
 const Top = styled.div`

@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: `Romaric Fargetton`,
-    description: `Romaric Fargetton is a frontend developer, designer and teacher`
+    description: `Romaric Fargetton est un développeur front-end, designer et formateur vivant actuellement à Tours.`
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
