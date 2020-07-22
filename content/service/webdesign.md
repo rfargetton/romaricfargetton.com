@@ -2,4 +2,4 @@
 title: Webdesign et ergonomie
 type: service
 ---
-Réalisation de design responsive selon un processus adapté aux fonctionnalités du produit et aux besoins du client.
+Je réalise des **designs adaptatifs** selon un processus adapté à **vos besoins** et aux **fonctionnalités du produit**.
