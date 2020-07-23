@@ -6,8 +6,6 @@ import { graphql } from "gatsby" ;
 import Layout from "../components/Layout.js" ;
 import { PageHeader, HeaderTitle, HeaderIntro } from "../components/PageHeader.js";
 import Content from "../components/Content.js" ;
-import { Section, SectionTitle } from "../components/Section.js" ;
-import ServiceList from "../components/ServiceList.js" ;
 
 const Body = styled.div`
   max-width: 65%;
@@ -34,12 +32,6 @@ const About = ({ data }) => {
           {page.frontmatter.subheading}
         </HeaderIntro>
       </PageHeader>
-
-      <Section>
-        <ServiceList 
-          columns={4}
-        /> 
-      </Section>
 
       <Content>
         <Body dangerouslySetInnerHTML={{ __html : page.html }} />
