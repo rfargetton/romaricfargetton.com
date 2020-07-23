@@ -1,5 +1,5 @@
 ---
-title: Calculatrice React
+title: Calculatrice
 featured image: /assets/calculator-screenshot1.png
 link: https://calculator.romaricfargetton.com/
 repo: https://github.com/rfargetton/react-calculator
