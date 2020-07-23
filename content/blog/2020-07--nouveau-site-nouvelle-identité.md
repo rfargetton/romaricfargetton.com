@@ -2,7 +2,7 @@
 title: Nouveau site, nouvelle identité
 date: 2020-07-23T13:35:02.275Z
 color: "#2e3440"
-featured image: /assets/rf-logo_1028-01.png
+featured image: /assets/rf-logo_1028-01-01.png
 type: blog
 tags:
   - divers
