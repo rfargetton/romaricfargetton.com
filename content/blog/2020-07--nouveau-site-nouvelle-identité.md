@@ -24,7 +24,7 @@ J'ai également tiré inspiration des représentations graphiques de branches da
 
 ![logo et grille de composition](/assets/logo-pres-1.png "Présentation-logo-2")
 
-\## La typographie
+## La typographie
 
 Pour la typographie, mon choix s'est porté sur la police [Inter](https://rsms.me/inter/) créée par Rasmus Andersson, un développeur logiciel basé à San Francisco, passionné de design et typographie. Voici les aspects qui m'ont séduit dans cette police :
 - Cette typographie est open source et gratuite 
