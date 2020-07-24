@@ -60,6 +60,7 @@ const ContentBox = styled(Container)`
   }
   img {
     width: 100%;
+    border-radius: 8px;
   }
   .gatsby-highlight {
     background-color: ${props => props.theme.backgroundCodeblock};
