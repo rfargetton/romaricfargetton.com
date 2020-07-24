@@ -39,8 +39,8 @@ collections:
         - { name: "date", label: "Date", widget: "date" }
         - { name: "body", label: "Body", widget: "markdown" }
         - { name: "featured image", label: "image", widget: "image", required: false }
-        - { name: "link", label: "Link" required: false }
-        - { name: "repo", label: "Repo" required: false }
+        - { name: "link", label: "Link", required: false }
+        - { name: "repo", label: "Repo", required: false }
         - { name: "type", label: "Type", widget: "hidden", default: "project" }
 
     - name: service
