@@ -44,26 +44,30 @@ const ProjectList = ({ projects, columns }) => {
               <div dangerouslySetInnerHTML={{ __html: project.html }} />
             </ProjectContent>
             <Links>
-              <Button>
-                <a 
-                  href={project.frontmatter.link}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Eye />
-                  <span>Demo</span>
-                </a>
-              </Button>
-              <Button>
-                <a 
-                  href={project.frontmatter.repo}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <GitHub />
-                  <span>Repo</span>
-                </a>
-              </Button>
+              {project.frontmatter.link &&
+                <Button>
+                  <a 
+                    href={project.frontmatter.link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Eye />
+                    <span>Demo</span>
+                  </a>
+                </Button>
+              }
+              {project.frontmatter.repo &&
+                <Button>
+                  <a 
+                    href={project.frontmatter.repo}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <GitHub />
+                    <span>Repo</span>
+                  </a>
+                </Button>
+              }
             </Links>
 
           </Card>

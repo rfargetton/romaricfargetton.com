@@ -58,6 +58,9 @@ const ContentBox = styled(Container)`
     border-left: 4px solid ${props => props.theme.keyword};
     color: ${props => props.theme.keyword};
   }
+  img {
+    width: 100%;
+  }
   .gatsby-highlight {
     background-color: ${props => props.theme.backgroundCodeblock};
     color: ${props => props.theme.code};

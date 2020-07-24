@@ -23,7 +23,7 @@ const Tag = ({ data, pageContext }) => {
           {capitalizedTag}
         </HeaderTitle>
         <HeaderIntro>
-          {`${posts.length} posts trouvé${posts.length > 1 ? "s" : ""} `}
+          {`${posts.length} article${posts.length > 1 ? "s" : ""} trouvé${posts.length > 1 ? "s" : ""} dans cette catégorie.`}
         </HeaderIntro>
       </PageHeader>
 
