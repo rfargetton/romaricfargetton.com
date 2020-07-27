@@ -10,22 +10,23 @@ module.exports = {
     description: `Romaric Fargetton est un développeur front-end, designer et formateur vivant actuellement à Tours.`
   },
   plugins: [
-    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `assets`,
-        path: `${__dirname}/static/assets`
+        path: `${__dirname}/static/assets`,
+        name: `assets`
       }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `content`,
-        path: `${__dirname}/content`
+        path: `${__dirname}/content`,
+        name: `content`
       }
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -46,7 +47,6 @@ module.exports = {
         ]
       }
     },
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-netlify-cms`
   ]
 };

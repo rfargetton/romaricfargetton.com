@@ -52,7 +52,7 @@ const ProjectList = ({ projects, columns }) => {
                     rel="noreferrer"
                   >
                     <Eye />
-                    <span>Demo</span>
+                    <span>Site</span>
                   </a>
                 </Button>
               }
@@ -64,7 +64,7 @@ const ProjectList = ({ projects, columns }) => {
                     rel="noreferrer"
                   >
                     <GitHub />
-                    <span>Repo</span>
+                    <span>Code</span>
                   </a>
                 </Button>
               }
