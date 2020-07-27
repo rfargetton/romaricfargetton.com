@@ -15,36 +15,36 @@ C'est le grand jour ! Je suis fier de dévoiler aujourd'hui un site web fraichem
 
 Vous allez beaucoup m'entendre parler de [Gatbsy](https://www.gatsbyjs.org/) et des générateurs de site statique en général. Mais quelle est cette nouvelle technologie ? Pour résumer, le SSG (*static site generator*) combine une source de donnée, des templates et des composants pour générer des sites statiques directement servis aux visiteurs. Un site statique, certes, mais géré dynamiquement ! Les bénéfices sont multiples :
 
-* Des niveaux de performance inégalables par des sites dynamiques traditionnels (WordPress par exemple).
-* Des économies de gestion et d'hébergement.
-* Des sites web fiables, présentant moins de failles de sécurité.
+* Des **niveaux de performance inégalables** par des sites dynamiques traditionnels (WordPress par exemple).
+* Des **économies** de gestion et d'hébergement.
+* Des sites web **fiables**, présentant **moins de failles de sécurité**.
 * Des utilisateurs et des développeurs contents 😃
 
 Si vous voulez en savoir plus, un nouvel article à ce sujet est dans les tuyaux et sera publié très bientôt ! 
 
 ### Et le contenu ?
 
-Le contenu du site, c'est-à-dire les textes, les articles et médias, est géré avec [NetlifyCMS](https://www.netlifycms.org/). un CMS open-source adapté aux sites statiques, simple de prise en main et assez configurable. Il a été créé par la plateforme de déploiement [Netflify](https://www.netlify.com/) que j'utilise moi-même pour mes projets. L’intégration du CMS avec la plateforme est optimale et donne beaucoup de possibilités. 
+Le contenu du site, c'est-à-dire les textes, articles et médias, est manipulé avec [NetlifyCMS](https://www.netlifycms.org/), un CMS open-source adapté aux sites statiques, **simple de prise en main** et assez **configurable**. Il a été créé par la plateforme de déploiement [Netflify](https://www.netlify.com/) que j'utilise moi-même pour mes projets. L’intégration du CMS avec la plateforme est optimale et donne beaucoup de possibilités. 
 
 ### Sous le capot
 
-* [Styled Components](https://styled-components.com/) | librairie CSS-in-JS pour la stylisation des composants React.
-* [Typefaces](https://github.com/KyleAMathews/typefaces) | Outil facilitant le téléchargement de webfonts via NPM.
-* [Lodash](https://lodash.com/) | L'indispensable librairie utilitaire en JavaScript.
-* [Formik](https://formik.org/) | Une librairie qui facilite la création et la gestion des formulaires dans React. 
-* [PrismJs](https://prismjs.com/) | Outil de coloration de code pour les articles techniques.
+* [**Styled Components**](https://styled-components.com/) | librairie CSS-in-JS pour la stylisation des composants React.
+* [**Typefaces**](https://github.com/KyleAMathews/typefaces) | Outil facilitant le téléchargement de webfonts via NPM.
+* [**Lodash**](https://lodash.com/) | L'indispensable librairie utilitaire en JavaScript.
+* [**Formik**](https://formik.org/) | Une librairie qui facilite la création et la gestion des formulaires dans React. 
+* [**PrismJs**](https://prismjs.com/) | Outil de coloration de code pour les articles techniques.
 
 ## L'identité
 
+![logo final](/logo-final-01.png "logo final")
+
 Pour le logo, l'enjeu principal était d'obtenir une image qui fasse le lien  entre mon profil de designer et mes compétences de développeur front end. Un monogramme élaboré à partir d'initiales m'a semblé être une piste à la fois simple et porteuse puisqu'elle traduit mon amour pour la lettre ! 
 
-![processus de création du logo](/assets/logo-pres-1-01.png "Présentation-logo-1")
+![processus de création du logo](/logo-pres-1-01.png "Présentation-logo-1")
 
 J'ai également tiré inspiration des représentations graphiques de branches dans le logiciel de versionnage [Git](https://git-scm.com/) (un outil essentiel pour les développeurs). En croisant ces éléments de technologie et de typographie, j'ai pu obtenir un résultat pertinent, élégant, définitivement ancré dans le design et les nouvelles technologies.
 
-![logo et grille de composition](/assets/logo-pres-2-01.png "Présentation-logo-2")
-
-![logo final](/assets/logo-final-01.png "logo final")
+![logo et grille de composition](/logo-pres-2-01.png "Présentation-logo-2")
 
 ## La typographie
 
@@ -59,9 +59,9 @@ Pour la typographie, mon choix s'est porté sur la police [Inter](https://rsms.m
 
 ### La palette de couleurs
 
-La palette de couleur utilisée par le site et l'identité visuelle s'appuie largement sur le thème [Nord](https://www.nordtheme.com/) très connu de nombreux développeurs car il est souvent utilisé pour la colorisation du code dans certains éditeurs de texte. J'ai choisi cette palette pour sa **sobriété** et sa **simplicité**. Son niveau de contraste global est bon sans être trop fort, ce qui a un effet assez apaisant pour les interfaces utilisateurs ou il est en usage. 
-
 ![Theme Nord](https://raw.githubusercontent.com/arcticicestudio/nord-docs/develop/assets/images/nord/repository-color-palettes.svg?sanitize=true "Nord")
+
+La palette de couleur utilisée par le site et l'identité visuelle s'appuie largement sur le thème [Nord](https://www.nordtheme.com/) très connu de nombreux développeurs car il est souvent utilisé pour la colorisation du code dans certains éditeurs de texte. J'ai choisi cette palette pour sa **sobriété** et sa **simplicité**. Son niveau de contraste global est bon sans être trop fort, ce qui a un effet assez apaisant pour les interfaces utilisateurs ou il est en usage. 
 
 ## Les icônes
 
