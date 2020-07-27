@@ -2,7 +2,7 @@
 title: Un article pour tester les différents modules Markdown
 date: 2020-06-05T12:17:26.617Z
 color: papayawhip
-featured image: /assets/markdown.png
+featured image: /assets/logo-brand-markdown-png-favpng-hdesr8ayvuvbpsuebzhxfdhtt.jpg
 type: blog
 tags:
   - markdown
