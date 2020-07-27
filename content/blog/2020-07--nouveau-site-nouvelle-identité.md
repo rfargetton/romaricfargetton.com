@@ -36,7 +36,7 @@ Le contenu du site, c'est-à-dire les textes, articles et médias, est manipulé
 
 ## L'identité
 
-![logo final](/assets/logo-final-01.png "logo final")
+![logo final](../assets/logo-final-01.png "logo final")
 
 Pour le logo, l'enjeu principal était d'obtenir une image qui fasse le lien  entre mon profil de designer et mes compétences de développeur front end. Un monogramme élaboré à partir d'initiales m'a semblé être une piste à la fois simple et porteuse puisqu'elle traduit mon amour pour la lettre ! 
 
