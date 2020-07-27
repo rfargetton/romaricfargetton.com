@@ -11,7 +11,7 @@ import Content from "../components/Content.js" ;
 import { formatDate } from "../helpers/formatDate.js" ;
 
 const Body = styled.div`
-  max-width: 65%;
+  max-width: 70%;
   box-sizing: border-box;
   @media (max-width: 768px) {
     max-width: 100%;
