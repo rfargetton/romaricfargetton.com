@@ -28,23 +28,23 @@ Le contenu du site, c'est-à-dire les textes, articles et médias, est manipulé
 
 ### Sous le capot
 
-* [**Styled Components**](https://styled-components.com/) | librairie CSS-in-JS pour la stylisation des composants React.
-* [**Typefaces**](https://github.com/KyleAMathews/typefaces) | Outil facilitant le téléchargement de webfonts via NPM.
-* [**Lodash**](https://lodash.com/) | L'indispensable librairie utilitaire en JavaScript.
-* [**Formik**](https://formik.org/) | Une librairie qui facilite la création et la gestion des formulaires dans React. 
-* [**PrismJs**](https://prismjs.com/) | Outil de coloration de code pour les articles techniques.
+* **[Styled Components](https://styled-components.com/)** | librairie CSS-in-JS pour la stylisation des composants React.
+* **[Typefaces](https://github.com/KyleAMathews/typefaces)** | Outil facilitant le téléchargement de webfonts via NPM.
+* **[Lodash](https://lodash.com/)** | L'indispensable librairie utilitaire en JavaScript.
+* **[Formik](https://formik.org/)** | Une librairie qui facilite la création et la gestion des formulaires dans React. 
+* **[PrismJs](https://prismjs.com/)** | Outil de coloration de code pour les articles techniques.
 
 ## L'identité
 
-![logo final](/logo-final-01.png "logo final")
+![logo final](/assets/logo-final-01.png "logo final")
 
 Pour le logo, l'enjeu principal était d'obtenir une image qui fasse le lien  entre mon profil de designer et mes compétences de développeur front end. Un monogramme élaboré à partir d'initiales m'a semblé être une piste à la fois simple et porteuse puisqu'elle traduit mon amour pour la lettre ! 
 
-![processus de création du logo](/logo-pres-1-01.png "Présentation-logo-1")
+![processus de création du logo](/assets/logo-pres-1-01.png "Présentation-logo-1")
 
 J'ai également tiré inspiration des représentations graphiques de branches dans le logiciel de versionnage [Git](https://git-scm.com/) (un outil essentiel pour les développeurs). En croisant ces éléments de technologie et de typographie, j'ai pu obtenir un résultat pertinent, élégant, définitivement ancré dans le design et les nouvelles technologies.
 
-![logo et grille de composition](/logo-pres-2-01.png "Présentation-logo-2")
+![logo et grille de composition](/assets/logo-pres-2-01.png "Présentation-logo-2")
 
 ## La typographie
 
