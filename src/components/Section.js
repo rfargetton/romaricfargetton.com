@@ -6,7 +6,7 @@ import Container from "./Container.js" ;
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  color: ${props => props.theme.secondary};
+  color: ${props => props.theme.text};
   margin-bottom: 3rem;
 `
 const Line = styled.div`
@@ -14,7 +14,7 @@ const Line = styled.div`
   flex-grow: 2;
   margin-left: 2rem;
   border-radius: 8px;
-  background-color: ${props => props.theme.secondary};
+  background-color: ${props => props.theme.purple};
 `
 export const SectionWrapper = styled.section`
   padding: 3rem 0;

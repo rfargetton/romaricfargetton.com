@@ -8,7 +8,7 @@ import List from "./List.js" ;
 const Service = styled.li`
   text-align: left;
   svg {
-    stroke: ${props => props.theme.link};
+    stroke: ${props => props.color};
   }
 `
 const ServiceTitle = styled.h3`
@@ -25,6 +25,7 @@ const ServiceList = ({ columns }) => {
         <Layout 
           size={100}
           strokeWidth={1}
+          stroke={"#b48ead"}
         />
         <ServiceTitle>{webdesign.frontmatter.title}</ServiceTitle>
         <div dangerouslySetInnerHTML={{ __html : webdesign.html }} />
@@ -33,6 +34,7 @@ const ServiceList = ({ columns }) => {
         <Terminal 
           size={100}
           strokeWidth={1}
+          stroke={"#88c0d0"}
         />
         <ServiceTitle>{dev.frontmatter.title}</ServiceTitle>
         <div dangerouslySetInnerHTML={{ __html : dev.html }} />
@@ -41,6 +43,7 @@ const ServiceList = ({ columns }) => {
         <Settings 
           size={100}
           strokeWidth={1}
+          stroke={"#d08770"}
         />
         <ServiceTitle>{seo.frontmatter.title}</ServiceTitle>
         <div dangerouslySetInnerHTML={{ __html : seo.html }} />
@@ -49,6 +52,7 @@ const ServiceList = ({ columns }) => {
         <Users 
           size={100}
           strokeWidth={1}
+          stroke={"#bf616a"}
         />
         <ServiceTitle>{formation.frontmatter.title}</ServiceTitle>
         <div dangerouslySetInnerHTML={{ __html : formation.html }} />

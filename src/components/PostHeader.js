@@ -43,12 +43,13 @@ const HeaderTxt =  styled.div`
 `
 export const HeaderInfo = styled.div`
   font-size: 1rem;
-  margin: 1rem 0;
+  margin-top: 1rem;
+  color: ${props => props.theme.purple};
 `
 export const HeaderTitle = styled.h1`
   font-size: 2rem;
   line-height: 1.3;
-  margin: 0;
+  margin: 1rem 0;
 `
 
 export const PostHeader = ({ children, image, color, alt }) => {

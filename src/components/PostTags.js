@@ -14,7 +14,8 @@ const Tag = styled(Link)`
   margin: 0.25rem;
   background-color: ${props => props.theme.background};
   span {
-   margin: 0 0.5rem;
+    margin: 0 0.5rem;
+    color: ${props => props.theme.link};
   }
 `
 

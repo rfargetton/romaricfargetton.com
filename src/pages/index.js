@@ -44,7 +44,7 @@ const Home = ({ data }) => {
         </SectionTitle>
         <ProjectList
           projects={projects} 
-          columns={3}
+          columns={1}
         />
       </Section>
 

@@ -44,8 +44,8 @@ const Tags = styled(PostTags)`
   z-index: 1;
   position: relative;
 `
-const Read = styled(Button)`
-  background-color: ${props => props.theme.background};
+const Meta = styled.div`
+  color: ${props => props.theme.purple};
 `
 
 const PostList = ({ posts, columns }) => {
@@ -61,12 +61,12 @@ const PostList = ({ posts, columns }) => {
               />
               <PostContent>
                 <Tags tags={post.frontmatter.tags} />
-                  <PostTitle>
-                    <Link to={post.fields.slug}> 
-                      {post.frontmatter.title}
-                    </Link>
-                  </PostTitle>
-                  <div>Publié le {formatDate(post.frontmatter.date)} | {post.timeToRead} minutes</div>
+                <PostTitle>
+                  <Link to={post.fields.slug}> 
+                    {post.frontmatter.title}
+                  </Link>
+                </PostTitle>
+                <Meta>Publié le <b>{formatDate(post.frontmatter.date)}</b></Meta>
               </PostContent>
           </Card>
         )
