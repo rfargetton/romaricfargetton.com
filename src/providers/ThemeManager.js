@@ -13,7 +13,7 @@ export const ThemeContext = React.createContext(defaultState);
 const ThemeManager = ({ children }) => {
 
   // Initiate state variable `theme`
-  const [theme, setTheme] = useState("dark") ;
+  const [theme, setTheme] = useState("light") ;
 
   // Get initial theme setting from localStorage or default to dark
   useEffect(() => {
