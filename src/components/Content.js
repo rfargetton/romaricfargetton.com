@@ -36,19 +36,25 @@ const ContentBox = styled(Container)`
     }
   }
   ol {
-    counter-reset: ol;
-    li::before {
-      color: ${props => props.theme.comment};
-      counter-increment: ol;
-      content: counter(ol);
-      margin-right: 1rem;
+    list-style: outside symbols;
+    li {
+      margin: 1rem ;
+      padding-left: 1rem;
+      &::marker {
+        color: ${props => props.theme.link};
+        margin-right: 1rem;
+      }
     }
   }
   ul {
-    li::before {
-      color: ${props => props.theme.comment};
-      content: "•";
-      margin-right: 1rem;
+    list-style: outside;
+    li {
+      margin: 1rem ;
+      padding-left: 1rem;
+      &::marker {
+        color: ${props => props.theme.link};
+        margin-right: 1rem;
+      }
     }
   }
   blockquote {
