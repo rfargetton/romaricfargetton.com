@@ -94,7 +94,7 @@ export const query = graphql`
       }
     }
     projects: allMarkdownRemark(
-      limit: 3,
+      limit: 9,
       filter: {frontmatter: {type: {eq: "project"}}},
       sort: {order: DESC, fields: frontmatter___date}
     ){

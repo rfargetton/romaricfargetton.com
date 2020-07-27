@@ -11,7 +11,7 @@ collections:
       label: blog
       folder: content/blog
       create: true
-      slug: "{{year}}-{{month}}-{{dat—}}-{{slug}}"
+      slug: "{{slug}}"
       fields:
         - { name: "title", label: "Title" }
         - { name: "body", label: "Body", widget: "markdown" }
