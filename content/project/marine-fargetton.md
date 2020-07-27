@@ -1,6 +1,7 @@
 ---
 title: Marine Fargetton
-featured image: /assets/capture-d’écran-2020-07-23-à-12.55.27.png
+date: 2020-07-27T09:49:37.557Z
+featured image: /assets/mf-website.png
 link: https://www.marinefargetton.fr/
 repo: https://github.com/rfargetton/marine-fargetton
 type: project
