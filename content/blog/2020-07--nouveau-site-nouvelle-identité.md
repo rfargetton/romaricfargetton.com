@@ -24,7 +24,7 @@ Si vous voulez en savoir plus, un nouvel article à ce sujet est dans les tuyaux
 
 ### Et le contenu ?
 
-Le contenu du site, c'est-à-dire les textes, articles et médias, est manipulé avec [NetlifyCMS](https://www.netlifycms.org/), un CMS open-source adapté aux sites statiques, **simple de prise en main** et assez **configurable**. Il a été créé par la plateforme de déploiement [Netflify](https://www.netlify.com/) que j'utilise moi-même pour mes projets. L’intégration du CMS avec la plateforme est optimale et donne beaucoup de possibilités. 
+Le contenu du site, c'est-à-dire les textes, articles et médias, est manipulé avec [NetlifyCMS](https://www.netlifycms.org/), un CMS open-source adapté aux sites statiques, **simple de prise en main** et assez **configurable**. Il a été créé par la plateforme de déploiement [Netlify](https://www.netlify.com/) que j'utilise moi-même pour mes projets. L’intégration du CMS avec la plateforme est optimale et donne beaucoup de possibilités. 
 
 ### Sous le capot
 
