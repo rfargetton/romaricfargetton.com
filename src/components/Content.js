@@ -68,6 +68,12 @@ const ContentBox = styled(Container)`
     width: 100%;
     border-radius: 8px;
   }
+  .gatsby-resp-image-wrapper {
+    margin-right: -100px !important;
+    @media (max-width: 768px){
+      margin-right: auto !important;
+    }
+  }
   .gatsby-highlight {
     background-color: ${props => props.theme.backgroundCodeblock};
     color: ${props => props.theme.code};
