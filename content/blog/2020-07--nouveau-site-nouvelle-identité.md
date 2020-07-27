@@ -40,7 +40,7 @@ Le contenu du site, c'est-à-dire les textes, articles et médias, est manipulé
 
 Pour le logo, l'enjeu principal était d'obtenir une image qui fasse le lien  entre mon profil de designer et mes compétences de développeur front end. Un monogramme élaboré à partir d'initiales m'a semblé être une piste à la fois simple et porteuse puisqu'elle traduit mon amour pour la lettre ! 
 
-![processus de création du logo](/assets/logo-pres-1-01.png "Présentation-logo-1")
+![processus de création du logo](../assets/logo-pres-1-01.png "Présentation-logo-1")
 
 J'ai également tiré inspiration des représentations graphiques de branches dans le logiciel de versionnage [Git](https://git-scm.com/) (un outil essentiel pour les développeurs). En croisant ces éléments de technologie et de typographie, j'ai pu obtenir un résultat pertinent, élégant, définitivement ancré dans le design et les nouvelles technologies.
 
@@ -48,7 +48,7 @@ J'ai également tiré inspiration des représentations graphiques de branches da
 
 ## La typographie
 
-![Typographie Inter - Rasmus Andersson](/assets/Inter.png "Inter")
+![Typographie Inter - Rasmus Andersson](../assets/Inter.png "Inter")
 
 Pour la typographie, mon choix s'est porté sur la police [Inter](https://rsms.me/inter/) créée par **Rasmus Andersson**, un développeur logiciel basé à San Francisco, passionné de design et typographie. Voici les aspects qui m'ont séduit dans cette police :
 
@@ -59,13 +59,13 @@ Pour la typographie, mon choix s'est porté sur la police [Inter](https://rsms.m
 
 ### La palette de couleurs
 
-![Theme Nord](/assets/Nord.svg "Nord")
+![Theme Nord](../assets/Nord.png "Nord")
 
 La palette de couleur utilisée par le site et l'identité visuelle s'appuie largement sur le thème [Nord](https://www.nordtheme.com/) très connu de nombreux développeurs car il est souvent utilisé pour la colorisation du code dans certains éditeurs de texte. J'ai choisi cette palette pour sa **sobriété** et sa **simplicité**. Son niveau de contraste global est bon sans être trop fort, ce qui a un effet assez apaisant pour les interfaces utilisateurs ou il est en usage. 
 
 ## Les icônes
 
-![Feather Icons](/assets/Feather.png "Feather Icons")
+![Feather Icons](../assets/Feather.png "Feather Icons")
 
 Pour les icônes présents dans l'interface du site, j'ai opté pour la bibliothèque d'icône [Feather](https://feathericons.com/) que j'ai l'habitude d'utiliser. Les **terminaisons arrondies** ainsi que le dessin **sobre et minimaliste** étant en parfaire adéquation avec le logo réalisé en amont, ce choix me semblait évident. De plus, [un paquet NPM](https://github.com/feathericons/react-feather) très pratique propose une collection de composants React correspondant à chaque icône. 
 
