@@ -14,7 +14,7 @@ const Line = styled.div`
   flex-grow: 2;
   margin-left: 2rem;
   border-radius: 8px;
-  background-color: ${props => props.theme.purple};
+  background-color: ${props => props.theme.comment};
 `
 export const SectionWrapper = styled.section`
   padding: 3rem 0;

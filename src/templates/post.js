@@ -32,9 +32,9 @@ const Post = ({ data }) => {
           color={post.frontmatter.color}
           alt="random"
         >
-          <PostTags tags={post.frontmatter.tags} />
-          <HeaderTitle>{post.frontmatter.title}</HeaderTitle>
           <HeaderInfo>Publié le <b><time dateTime={date}>{formatDate(date)}</time></b> | {post.timeToRead} min</HeaderInfo>
+          <HeaderTitle>{post.frontmatter.title}</HeaderTitle>
+          <PostTags tags={post.frontmatter.tags} />
         </PostHeader>
         <Content>
           <Body dangerouslySetInnerHTML={{ __html : post.html }} />

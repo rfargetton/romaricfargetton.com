@@ -39,7 +39,7 @@ const Themes = {
     number: nord[15],
     function: nord[8],
     keyword: nord[9],
-    comment: nord[3],
+    comment: nord[6],
     error: nord[11],
   },
   dark: {
