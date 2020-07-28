@@ -2,6 +2,7 @@ import React from "react" ;
 import Img from "gatsby-image" ;
 import styled from "styled-components";
 
+import Card from "./Card.js" ;
 import Container from "./Container.js" ;
 
 const Wrapper = styled.header`
@@ -11,14 +12,13 @@ const Wrapper = styled.header`
 `
 const Inner = styled(Container)`
   min-height: 240px;
-  display: flex;
   box-sizing: border-box;
-  border-radius: 8px;
-  align-items: center;
+`
+const HeaderCard = styled(Card)`
+  display: flex;
   justify-content: space-between; 
+  align-items: center;
   padding: 2rem;
-  background-color: ${props => props.theme.backgroundHighlight};
-  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
   @media (max-width: 768px) {
     flex-flow: column-reverse wrap;
     align-items: flex-start;
@@ -44,7 +44,6 @@ const HeaderTxt =  styled.div`
 export const HeaderInfo = styled.div`
   font-size: 1rem;
   margin-top: 1rem;
-  color: ${props => props.theme.purple};
 `
 export const HeaderTitle = styled.h1`
   font-size: 2rem;
@@ -56,12 +55,14 @@ export const PostHeader = ({ children, image, color, alt }) => {
   return (
     <Wrapper>
       <Inner>
-        <HeaderTxt>
-          {children}
-        </HeaderTxt>
-        <HeaderImg color={color}>
-          <Img fluid={image} />
-        </HeaderImg>
+        <HeaderCard>
+          <HeaderTxt>
+            {children}
+          </HeaderTxt>
+          <HeaderImg color={color}>
+            <Img fluid={image} />
+          </HeaderImg>
+        </HeaderCard>
       </Inner>
     </Wrapper>
   )

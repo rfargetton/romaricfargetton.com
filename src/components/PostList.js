@@ -6,14 +6,11 @@ import { Link } from 'gatsby' ;
 import Button from "./Button.js" ;
 import PostTags from "./PostTags.js" ;
 import List from "./List.js" ;
+import Card from "./Card.js" ;
 import { formatDate } from "../helpers/formatDate.js" ;
 
-const Card = styled.li`
-  border-radius: 8px;
+const PostCard = styled(Card)`
   position: relative;
-  overflow: hidden;
-  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
-  background-color: ${props => props.theme.backgroundHighlight};
   img {
     width: 100%;
   }
@@ -54,7 +51,8 @@ const PostList = ({ posts, columns }) => {
     <List columns={columns}>
       {posts.map(({node: post}) => {
         return (
-          <Card className="post" key={post.id}>
+          <li className="post" key={post.id}>
+            <PostCard>
               <Img 
                 style={{backgroundColor: post.frontmatter.color}}
                 fluid={post.frontmatter.featured_image.childImageSharp.fluid} 
@@ -68,7 +66,8 @@ const PostList = ({ posts, columns }) => {
                 </PostTitle>
                 <Meta>Publié le <b>{formatDate(post.frontmatter.date)}</b></Meta>
               </PostContent>
-          </Card>
+            </PostCard>
+          </li>
         )
       })}
     </List>

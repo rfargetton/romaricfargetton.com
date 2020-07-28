@@ -7,7 +7,7 @@ const Wrapper = styled.button`
   font-size: 1rem;
   padding: 8px;
   border-radius: 8px;
-  box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   border: none;
   background-color: ${props => props.theme.background};

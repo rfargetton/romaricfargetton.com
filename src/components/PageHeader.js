@@ -4,6 +4,7 @@ import { GitHub, Linkedin, Mail } from "react-feather" ;
 
 import useSocialLinks from '../hooks/SocialLinks' ;
 import Container from "./Container.js" ;
+import Card from "./Card.js" ;
 
 const Wrapper = styled.section`
   padding-top: 8rem;
@@ -12,14 +13,13 @@ const Wrapper = styled.section`
 `
 const Inner = styled(Container)`
   min-height: 240px;
-  display: flex;
   box-sizing: border-box;
-  border-radius: 8px;
-  align-items: center;
+`
+const HeaderCard = styled(Card)`
+  display: flex;
   justify-content: space-between; 
+  align-items: center;
   padding: 2rem;
-  background-color: ${props => props.theme.backgroundHighlight};
-  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
   @media (max-width: 768px) {
     padding: 1rem;
   }
@@ -34,6 +34,7 @@ export const HeaderIntro = styled.p`
   font-size: 1.15rem;
   line-height: 1.5;
   margin-top: 2rem;
+  color: ${props => props.theme.secondary};
 `
 export const HeaderTitle = styled.h1`
   font-size: 2.25rem;
@@ -46,9 +47,11 @@ export const PageHeader = ({ children }) => {
   return (
     <Wrapper>
       <Inner>
-        <HeaderTxt>
-          {children}
-        </HeaderTxt>
+        <HeaderCard>
+          <HeaderTxt>
+            {children}
+          </HeaderTxt>
+        </HeaderCard>
       </Inner>
     </Wrapper>
   )

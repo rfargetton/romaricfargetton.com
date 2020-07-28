@@ -3,6 +3,7 @@ import Img from "gatsby-image" ;
 import styled from "styled-components";
 import { GitHub, Linkedin, Mail } from "react-feather" ;
 
+import Card from "./Card.js" ;
 import useSocialLinks from '../hooks/SocialLinks' ;
 import Container from "./Container.js" ;
 
@@ -14,14 +15,13 @@ const Wrapper = styled.section`
 `
 const Inner = styled(Container)`
   min-height: 240px;
-  display: flex;
   box-sizing: border-box;
-  border-radius: 8px;
-  align-items: center;
+`
+const HeaderCard = styled(Card)`
+  display: flex;
   justify-content: space-between; 
+  align-items: center;
   padding: 2rem;
-  background-color: ${props => props.theme.backgroundHighlight};
-  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
   @media (max-width: 768px) {
     flex-flow: column-reverse wrap;
     align-items: flex-start;
@@ -68,6 +68,7 @@ export const HeaderIntro = styled.p`
   font-size: 1.15rem;
   line-height: 1.5;
   margin: 2rem 0;
+  color: ${props => props.theme.secondary};
 `
 export const HeaderTitle = styled.h1`
   font-size: 2rem;
@@ -82,37 +83,40 @@ export const HomeHeader = ({ children, image, alt }) => {
   return (
     <Wrapper>
       <Inner>
-        <HeaderTxt>
-          {children}
-        </HeaderTxt>
-        <HeaderImg>
-          <Img fluid={image} />
-          <SocialBar>
-              <a
-                href={github.frontmatter.link}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <GitHub />
-              </a>
-              <a 
-                href={linkedin.frontmatter.link}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Linkedin />
-              </a>
-              <a 
-                href={email.frontmatter.link}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Mail />
-              </a>
-          </SocialBar>
-        </HeaderImg>
+        <HeaderCard>
+          <HeaderTxt>
+            {children}
+          </HeaderTxt>
+          <HeaderImg>
+            <Img fluid={image} />
+            <SocialBar>
+                <a
+                  href={github.frontmatter.link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <GitHub />
+                </a>
+                <a 
+                  href={linkedin.frontmatter.link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Linkedin />
+                </a>
+                <a 
+                  href={email.frontmatter.link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Mail />
+                </a>
+            </SocialBar>
+          </HeaderImg>
+        </HeaderCard>
       </Inner>
     </Wrapper>
   )
+
 }
 
