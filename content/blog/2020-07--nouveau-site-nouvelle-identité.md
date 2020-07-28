@@ -67,7 +67,7 @@ La palette de couleurs utilisée par le site et l'identité visuelle s'appuie la
 
 ![Feather Icons](../assets/Feather.png "Feather Icons")
 
-Pour les icônes présents dans l'interface du site, j'ai opté pour la bibliothèque d'icône [Feather](https://feathericons.com/) que j'ai l'habitude d'utiliser. Les **terminaisons arrondies** ainsi que le dessin **sobre et minimaliste** étant en parfaire adéquation avec le logo réalisé en amont, ce choix me semblait évident. De plus, [un paquet NPM](https://github.com/feathericons/react-feather) très pratique propose une collection de composants React correspondant à chaque icône. 
+Pour les icônes présents dans l'interface du site, j'ai opté pour la bibliothèque d'icône [Feather](https://feathericons.com/) que j'ai l'habitude d'utiliser. Les **terminaisons arrondies** ainsi que le dessin **sobre et minimaliste** étant en parfaite adéquation avec le logo réalisé en amont, ce choix me semblait évident. De plus, [un paquet NPM](https://github.com/feathericons/react-feather) très pratique propose une collection de composants React correspondant à chaque icône. 
 
 ## Conclusion
 
