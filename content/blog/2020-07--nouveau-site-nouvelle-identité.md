@@ -13,7 +13,7 @@ C'est le grand jour ! Je suis fier de dévoiler aujourd'hui un site web fraichem
 
 ### Un site réalisé avec Gatsby
 
-Vous allez beaucoup m'entendre parler de [Gatbsy](https://www.gatsbyjs.org/) et des générateurs de site statique en général. Mais quelle est cette nouvelle technologie ? Pour résumer, le SSG (*static site generator*) combine une source de donnée, des templates et des composants pour générer des sites statiques directement servis aux visiteurs. Un site statique, certes, mais géré dynamiquement ! Les bénéfices sont multiples :
+Vous allez beaucoup m'entendre parler de [Gatbsy](https://www.gatsbyjs.org/) et des générateurs de sites statiques en général. Mais quelle est cette nouvelle technologie ? Pour résumer, le SSG (*static site generator*) combine une source de données, des templates et des composants pour générer des sites statiques directement servis aux visiteurs. Un site statique, certes, mais géré dynamiquement ! Les bénéfices sont multiples :
 
 * Des **niveaux de performance inégalables** par des sites dynamiques traditionnels (WordPress par exemple).
 * Des **économies** de gestion et d'hébergement.
@@ -54,20 +54,20 @@ Pour la typographie, mon choix s'est porté sur la police [Inter](https://rsms.m
 
 * Elle est ***open source* et gratuite**.
 * Elle présente **une hauteur d'x importante**, ce qui assure un certain confort de lecture même en petit corps de texte ou dans d'autres conditions difficiles.
-* Elle a été spécialement **conçu pour un usage écran**.
-* Ancré dans la grand famille des *grotesque*, son design est à la fois **universel et contemporain**.
+* Elle a été spécialement **conçue pour un usage écran**.
+* Appartenant à la grande famille des *grotesque*, son design est à la fois **universel et contemporain**.
 
 ### La palette de couleurs
 
 ![Theme Nord](../assets/Nord.png "Nord")
 
-La palette de couleur utilisée par le site et l'identité visuelle s'appuie largement sur le thème [Nord](https://www.nordtheme.com/) très connu de nombreux développeurs car il est souvent utilisé pour la colorisation du code dans certains éditeurs de texte. J'ai choisi cette palette pour sa **sobriété** et sa **simplicité**. Son niveau de contraste global est bon sans être trop fort, ce qui a un effet assez apaisant pour les interfaces utilisateurs ou il est en usage. 
+La palette de couleurs utilisée par le site et l'identité visuelle s'appuie largement sur le thème [Nord](https://www.nordtheme.com/) très connu de nombreux développeurs car il est souvent utilisé pour la colorisation du code dans certains éditeurs de texte. J'ai choisi cette palette pour sa **sobriété** et sa **simplicité**. Son niveau de contraste global est bon sans être trop fort, ce qui a un effet assez apaisant pour les interfaces utilisateurs où il est en usage. 
 
 ## Les icônes
 
 ![Feather Icons](../assets/Feather.png "Feather Icons")
 
-Pour les icônes présents dans l'interface du site, j'ai opté pour la bibliothèque d'icône [Feather](https://feathericons.com/) que j'ai l'habitude d'utiliser. Les **terminaisons arrondies** ainsi que le dessin **sobre et minimaliste** étant en parfaire adéquation avec le logo réalisé en amont, ce choix me semblait évident. De plus, [un paquet NPM](https://github.com/feathericons/react-feather) très pratique propose une collection de composants React correspondant à chaque icône. 
+Pour les icônes présents dans l'interface du site, j'ai opté pour la bibliothèque d'icône [Feather](https://feathericons.com/) que j'ai l'habitude d'utiliser. Les **terminaisons arrondies** ainsi que le dessin **sobre et minimaliste** étant en parfaite adéquation avec le logo réalisé en amont, ce choix me semblait évident. De plus, [un paquet NPM](https://github.com/feathericons/react-feather) très pratique propose une collection de composants React correspondant à chaque icône. 
 
 ## Conclusion
 
