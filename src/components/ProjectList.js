@@ -23,11 +23,12 @@ const ProjectCard = styled(Card)`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  height: 100%;
   img {
     width: 100%;
   }
   @media (max-width: 768px) {
-    display: initial;
+    display: block;
   }
 `
 const Links = styled.div`
