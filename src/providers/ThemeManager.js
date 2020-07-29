@@ -4,7 +4,7 @@ import styled, { ThemeProvider }  from "styled-components" ;
 import Themes from "../styles/Themes.js" ;
 
 const defaultState = {
-  theme: "dark",
+  theme: "light",
   toggleTheme: () => {}
 };
 
