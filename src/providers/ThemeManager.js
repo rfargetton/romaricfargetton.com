@@ -15,9 +15,9 @@ const ThemeManager = ({ children }) => {
   // Initiate state variable `theme`
   const [theme, setTheme] = useState("light") ;
 
-  // Get initial theme setting from localStorage or default to dark
+  // Get initial theme setting from localStorage or default to light
   useEffect(() => {
-    setTheme(localStorage.getItem("theme") ? JSON.parse(localStorage.getItem("theme")) : "dark");
+    setTheme(localStorage.getItem("theme") ? JSON.parse(localStorage.getItem("theme")) : "light");
   });
   
   const getNextTheme = (prevTheme) => {
