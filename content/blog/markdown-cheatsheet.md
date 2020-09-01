@@ -7,8 +7,6 @@ type: blog
 tags:
   - divers
 ---
-# Markdown Cheat Sheet
-
 ## Text
 
 Regular, **Bold**, *Italic*, ~~strikethrough~~
