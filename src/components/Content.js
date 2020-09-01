@@ -10,24 +10,33 @@ const ContentWrapper = styled(SectionWrapper)`
 const ContentBox = styled(Container)`
   h1 {
     font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
   }
   h2 {
     font-size: 1.75rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
   }
   h3 {
     font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
   }
   h4 {
     font-size: 1.25rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
   }
   h1, h2, h3, h4, h5, h6, p {
-    margin: 1rem 0;
     line-height: 1.5;
   }
   p {
+    margin-bottom: 1rem;
     font-size: 1rem;
   }
   ol {
+    margin: 1rem 0;
     list-style: outside symbols;
     padding-left: 0.5rem;
     li {
@@ -39,6 +48,7 @@ const ContentBox = styled(Container)`
     }
   }
   ul {
+    margin: 1rem 0;
     list-style: outside;
     padding-left: 0.5rem;
     li {
@@ -63,6 +73,7 @@ const ContentBox = styled(Container)`
   img {
     width: 100%;
     border-radius: 8px;
+    margin: 1rem 0;
   }
   table {
     table-layout: fixed;
