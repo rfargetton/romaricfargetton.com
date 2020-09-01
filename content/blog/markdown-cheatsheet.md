@@ -2,7 +2,7 @@
 title: Markdown Cheatsheet
 date: 2020-09-01T09:24:47.591Z
 color: coral
-featured image: /assets/logo-brand-markdown-png-favpng-hdesr8ayvuvbpsuebzhxfdhtt.jpg
+featured image: /assets/pngegg.png
 type: blog
 tags:
   - divers
