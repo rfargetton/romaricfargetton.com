@@ -42,10 +42,13 @@ const Tags = styled(PostTags)`
   position: relative;
 `
 const Meta = styled.div`
-  color: ${props => props.theme.purple};
+  time {
+    color: ${props => props.theme.link};
+  }
 `
 
 const PostList = ({ posts, columns }) => {
+
 
   return (
     <List columns={columns}>
@@ -64,7 +67,7 @@ const PostList = ({ posts, columns }) => {
                     {post.frontmatter.title}
                   </Link>
                 </PostTitle>
-                <Meta>Publié le <b>{formatDate(post.frontmatter.date)}</b></Meta>
+                <Meta>Publié le <b><time dateTime={post.frontmatter.date}>{formatDate(post.frontmatter.date)}</time></b></Meta>
               </PostContent>
             </PostCard>
           </li>

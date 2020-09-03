@@ -44,7 +44,9 @@ const HeaderTxt =  styled.div`
 export const HeaderInfo = styled.div`
   font-size: 1rem;
   margin-top: 1rem;
-  color: ${props => props.theme.purple};
+  time {
+    color: ${props => props.theme.link};
+  }
 `
 export const HeaderTitle = styled.h1`
   font-size: 2rem;
