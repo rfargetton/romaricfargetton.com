@@ -1,7 +1,7 @@
 ---
 title: L'indispensable fiche de rappel pour Markdown
 date: 2020-09-03T08:23:56.191Z
-color: coral
+color: papayawhip
 featured image: /assets/pngegg.png
 type: blog
 tags:
