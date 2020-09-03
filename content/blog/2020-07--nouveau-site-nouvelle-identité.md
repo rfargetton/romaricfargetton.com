@@ -1,6 +1,6 @@
 ---
 title: Nouveau site, nouvelle identité
-date: 2020-07-23T13:35:02.275Z
+date: 2020-09-01T13:35:02.275Z
 color: "#2e3440"
 featured image: /assets/logo-final-01.png
 type: blog
