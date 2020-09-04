@@ -44,7 +44,6 @@ export const query = graphql`
       edges {
         node {
           id
-          timeToRead
           fields {
             slug
           }

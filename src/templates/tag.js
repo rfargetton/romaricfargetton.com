@@ -46,13 +46,13 @@ export const query = graphql`
       edges {
         node {
           id
-          excerpt
           fields {
             slug
           }
           frontmatter {
             title
             color
+            date
             featured_image {
               childImageSharp {
                 fluid(maxHeight: 300, maxWidth: 400) {
