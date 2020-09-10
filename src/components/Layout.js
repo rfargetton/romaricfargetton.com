@@ -5,6 +5,7 @@ import useSiteMetadata from "../hooks/SiteMetadata.js" ;
 import GlobalStyles from "../styles/Global.js" ;
 import Header from "./Header.js" ;
 import Footer from "./Footer.js" ;
+import avatar from "../img/avatar-1.jpg";
 
 
 const Layout = ({ children }) => {
@@ -20,6 +21,9 @@ const Layout = ({ children }) => {
       >
         <html lang="fr" />
         <meta name="description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={avatar} />
       </ Helmet>
       <Header />
       <main>{ children }</main>
