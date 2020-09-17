@@ -10,7 +10,7 @@ import avatar from "../img/avatar-1.jpg";
 
 const Layout = ({ children }) => {
 
-  const { title, description } = useSiteMetadata();
+  const { title, description, siteUrl } = useSiteMetadata();
 
   return (
     <div>
@@ -21,9 +21,17 @@ const Layout = ({ children }) => {
       >
         <html lang="fr" />
         <meta name="description" content={description} />
+        <link rel="canonical" href={siteUrl} />
+        
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={avatar} />
+        <meta property="og:url" content={siteUrl} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={avatar} />
       </ Helmet>
       <Header />
       <main>{ children }</main>

@@ -12,6 +12,7 @@ export const wrapRootElement = ({ element }) => {
 }
 
 export const onPreRenderHTML = ({ getHeadComponents, replaceHeadComponents }) => {
+
   const headComponents = getHeadComponents();
   headComponents.sort((x, y) => {
     if (x.props && x.props["data-react-helmet"]) {
