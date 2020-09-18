@@ -51,7 +51,7 @@ const FooterNav = styled.nav`
 
 const Footer = () => {
 
-  const { title } = useSiteMetadata() ;
+  const { defaultTitle } = useSiteMetadata() ;
   const { github, email, linkedin } =  useSocialLinks() ;
 
   return (
@@ -63,7 +63,7 @@ const Footer = () => {
         </Top>
 
         <FooterInfo>
-          <Title>{ title }</Title>
+          <Title>{ defaultTitle }</Title>
         </FooterInfo>
 
         <FooterNav>

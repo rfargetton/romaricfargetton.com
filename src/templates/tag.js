@@ -1,8 +1,8 @@
 import React from "react" ;
-import { Helmet } from "react-helmet" ;
 import { graphql } from "gatsby" ;
 import _ from "lodash" ;
 
+import Seo from "../components/Seo.js"
 import Layout from "../components/Layout.js" ;
 import { PageHeader, HeaderTitle, HeaderIntro } from "../components/PageHeader.js";
 import { Section, SectionTitle } from "../components/Section.js" ;
@@ -16,7 +16,10 @@ const Tag = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <Helmet title={capitalizedTag} /> 
+
+      <Seo 
+        title={capitalizedTag} 
+      /> 
 
       <PageHeader>
         <HeaderTitle>
