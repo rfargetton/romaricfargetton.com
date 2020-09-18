@@ -1,8 +1,8 @@
 import React from "react" ;
 import styled from "styled-components";
-import { Helmet } from "react-helmet" ;
 import { graphql } from "gatsby" ;
 
+import Seo from "../components/Seo.js"
 import Layout from "../components/Layout.js" ;
 import Container from "../components/Container.js";
 import PostTags from "../components/PostTags.js" ;
@@ -25,7 +25,13 @@ const Post = ({ data }) => {
 
   return (
     <Layout>
-      <Helmet title={post.frontmatter.title} /> 
+
+      <Seo 
+        title={post.frontmatter.title} 
+        description={post.excerpt}
+        image={post.frontmatter.featured_image.childImageSharp.fluid.src}
+      /> 
+
       <article>
         <PostHeader
           image={post.frontmatter.featured_image.childImageSharp.fluid}
@@ -40,6 +46,7 @@ const Post = ({ data }) => {
           <Body dangerouslySetInnerHTML={{ __html : post.html }} />
         </Content>
       </article>
+
     </Layout>
   )
 }
@@ -52,11 +59,13 @@ export const query = graphql`
       id
       html
       timeToRead
+      excerpt
       frontmatter {
         color
         featured_image {
           childImageSharp {
             fluid(maxHeight: 500, maxWidth: 500, cropFocus: CENTER, quality: 90) {
+              src
               ...GatsbyImageSharpFluid
             }
           }

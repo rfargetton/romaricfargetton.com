@@ -1,7 +1,7 @@
 import React from "react" ;
-import { Helmet } from "react-helmet" ;
 import { graphql } from "gatsby" ;
 
+import Seo from "../components/Seo"
 import Layout from "../components/Layout.js" ;
 import { PageHeader, HeaderTitle, HeaderIntro } from "../components/PageHeader.js";
 import { Section, SectionTitle } from "../components/Section.js" ;
@@ -10,14 +10,19 @@ import PostList from "../components/PostList.js" ;
 const Blog = ({ data }) => {
 
   const posts = data.posts.edges ;
+  const page = data.page ;
 
   return (
     <Layout>
-      <Helmet title={"Blog"} /> 
+
+      <Seo 
+        title={page.frontmatter.title} 
+        description={page.frontmatter.subheading}
+      /> 
 
       <PageHeader>
         <HeaderTitle>
-          {"Blog"}
+          {page.frontmatter.title}
         </HeaderTitle>
         <HeaderIntro>
           {"Retrouvez ici mes derniers articles concernant JavaScript, React, le dévelopement web et le design d'interface en général."}
@@ -36,7 +41,16 @@ const Blog = ({ data }) => {
 
 export const query = graphql`
   query {
-    posts: allMarkdownRemark(
+    page: markdownRemark (
+      frontmatter: {title: {eq: "Blog"}} 
+     ){
+       frontmatter {
+         title
+         heading
+         subheading
+       }
+     }
+     posts: allMarkdownRemark(
       limit: 100,
       filter: {frontmatter: {type: {eq: "blog"}}},
       sort: {order: DESC, fields: frontmatter___date}

@@ -1,10 +1,10 @@
 import React from "react" ;
 import styled from "styled-components";
-import { Helmet } from "react-helmet" ;
 import { graphql } from "gatsby" ;
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { GitHub, Linkedin, Mail } from "react-feather" ;
 
+import Seo from "../components/Seo"
 import useSocialLinks from '../hooks/SocialLinks' ;
 import Layout from "../components/Layout.js" ;
 import Button from "../components/Button.js" ;
@@ -94,7 +94,10 @@ const Contact = ({ data }) => {
   return (
     <Layout>
 
-      <Helmet title={page.frontmatter.title} /> 
+      <Seo 
+        title={page.frontmatter.title} 
+        description={page.frontmatter.subheading}
+      /> 
 
       <PageHeader>
         <HeaderTitle>

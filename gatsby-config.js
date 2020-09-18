@@ -8,6 +8,7 @@ module.exports = {
   siteMetadata: {
     title: `Romaric Fargetton`,
     description: `Romaric Fargetton est un développeur front-end, designer et formateur vivant actuellement à Tours.`,
+    image: `/images/avatar.jpg`,
     siteUrl: `https://www.romaricfargetton.com`
   },
   plugins: [

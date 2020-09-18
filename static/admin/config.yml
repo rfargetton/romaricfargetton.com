@@ -63,6 +63,13 @@ collections:
           - { name: "heading", label: "Heading" }
           - { name: "subheading", label: "Subheading", widget: "text"  }
           - { name: "avatar", label: "Avatar", widget: "image" }
+      - label: "Blog" 
+        name: "blog"
+        file: content/pages/blog.md
+        fields:
+          - { name: "title", label: "title", widget: "string", default: "Blog" }
+          - { name: "heading", label: "Heading" }
+          - { name: "subheading", label: "Subheading", widget: "text"  }
       - label: "À Propos" 
         name: "a-propos"
         file: content/pages/a-propos.md

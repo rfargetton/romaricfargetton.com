@@ -1,8 +1,8 @@
 import React from "react" ;
 import styled from "styled-components";
-import { Helmet } from "react-helmet" ;
 import { graphql } from "gatsby" ;
 
+import Seo from "../components/Seo.js"
 import Layout from "../components/Layout.js" ;
 import { PageHeader, HeaderTitle, HeaderIntro } from "../components/PageHeader.js";
 import Content from "../components/Content.js" ;
@@ -22,7 +22,10 @@ const About = ({ data }) => {
   return (
     <Layout>
 
-      <Helmet title={page.frontmatter.title} /> 
+      <Seo 
+        title={page.frontmatter.title} 
+        description={page.frontmatter.subheading}
+      /> 
 
       <PageHeader>
         <HeaderTitle>

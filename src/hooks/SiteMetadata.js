@@ -6,8 +6,9 @@ const useSiteMetadata = () => {
       query {
         site {
           siteMetadata {
-            title,
-            description,
+            defaultTitle: title,
+            defaultDescription: description,
+            defaultImage: image,
             siteUrl
           }
         }

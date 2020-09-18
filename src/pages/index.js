@@ -2,6 +2,7 @@ import React, { useState } from "react" ;
 import { graphql, Link } from "gatsby" ;
 import styled from "styled-components" ;
 
+import Seo from "../components/Seo.js"
 import Layout from "../components/Layout.js" ;
 import Container from "../components/Container.js" ;
 import { HomeHeader, HeaderIntro, HeaderTitle } from "../components/HomeHeader.js" ;
@@ -20,6 +21,8 @@ const Home = ({ data }) => {
 
   return (
     <Layout>
+
+      <Seo title={"Romaric Fargetton – Développeur Front-end | Designer | Formateur "}/>
 
       <HomeHeader 
         image={page.frontmatter.avatar.childImageSharp.fluid} 
