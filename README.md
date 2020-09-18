@@ -1,4 +1,4 @@
-# [romaricfargetton.com](https::/www.romaricfargetton.com)
+# [romaricfargetton.com](https://www.romaricfargetton.com)
 
 This is my personal website, a place to share projects and thoughts on JavaScript, React and design in general. 
 
