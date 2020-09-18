@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: rfargetton/netlify-cms-test
+  repo: rfargetton/romaricfargetton.com
 
 media_folder: content/assets
 public_folder: /assets
