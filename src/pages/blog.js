@@ -16,13 +16,12 @@ const Blog = ({ data }) => {
     <Layout>
 
       <Seo 
-        title={page.frontmatter.title} 
-        description={page.frontmatter.subheading}
+        title={"Blog"}
       /> 
 
       <PageHeader>
         <HeaderTitle>
-          {page.frontmatter.title}
+          {"Blog"}
         </HeaderTitle>
         <HeaderIntro>
           {"Retrouvez ici mes derniers articles concernant JavaScript, React, le dévelopement web et le design d'interface en général."}
