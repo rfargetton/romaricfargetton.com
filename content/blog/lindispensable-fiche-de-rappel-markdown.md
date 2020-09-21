@@ -1,6 +1,6 @@
 ---
-title: L'indispensable fiche de rappel pour Markdown
-date: 2020-09-03T08:23:56.191Z
+title: L'indispensable fiche de rappel Markdown
+date: 2020-09-09T14:04:14.342Z
 color: papayawhip
 featured image: /assets/pngegg.png
 type: blog
