@@ -78,7 +78,7 @@ const ThemeButton = styled(Button)`
 
 const Header = () => {
 
-  const { title } = useSiteMetadata() ;
+  const { defaultTitle } = useSiteMetadata() ;
   const { theme, toggleTheme, getNextTheme } = useContext(ThemeContext);
 
   return (
@@ -88,7 +88,7 @@ const Header = () => {
         <Brand>
           <Link to="/">
             <NavLogo width={"40"} />
-            <SiteTitle>{ title }</SiteTitle>
+            <SiteTitle>{ defaultTitle }</SiteTitle>
           </Link>
         </Brand>
 

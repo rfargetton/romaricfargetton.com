@@ -11,7 +11,6 @@ import ServiceList from "../components/ServiceList.js" ;
 import Button from "../components/Button.js" ;
 import PostList from "../components/PostList.js" ;
 import ProjectList from "../components/ProjectList.js" ;
-import avatar from "../img/avatar-1.jpg" ;
 
 const Home = ({ data }) => {
 
@@ -36,6 +35,9 @@ const Home = ({ data }) => {
       </HomeHeader>
 
       <Section>
+        <SectionTitle>
+          <h2>Services</h2>
+        </SectionTitle>
         <ServiceList 
           columns={4}
         /> 
