@@ -5,7 +5,7 @@ color: transparent
 featured image: /assets/undraw_static_website_0107.png
 type: blog
 tags:
-  - ssg
+  - SSG
   - jamstack
 ---
 Les générateurs de sites statiques ou SSG (*static site generator*) offrent une nouvelle option, novatrice et prometteuse, dans la création de sites internet. J'ai moi-même choisi d'utiliser un SSG ([Gatsby](https://www.gatsbyjs.com)) pour la création de ce site internet. Mais comment fonctionnent-ils ? Quels sont leurs points forts ? En quoi sont-ils différents de solutions plus traditionnelles comme WordPress ou Drupal ?
@@ -50,7 +50,7 @@ La plupart des sites dynamiques que nous connaissons (Drupal, WordPress) utilise
 
 ### Performance
 
-![performance](../assets/giphy.gif)
+![performance](https://media.giphy.com/media/SRMt5G2uQqcbvnxihP/giphy.gif)
 
 Il y a presque 10 ans, lorsque j'ai commencé à réaliser des sites web, ces derniers n'étaient que de simple collections de fichier HTML sur lesquels j'intervenais directement pour modifier le contenu. Ce fonctionnement était très archaïque mais j'étais toujours étonné par le niveau de performance et de rapidité de ces sites très simples. Avec les SSG, j'ai pu retrouver cette quasi-instantanéité de réponse.
 
