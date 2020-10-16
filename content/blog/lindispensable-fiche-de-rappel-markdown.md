@@ -1,7 +1,7 @@
 ---
 title: L'indispensable fiche de rappel Markdown
 date: 2020-09-09T14:04:14.342Z
-color: papayawhip
+color: transparent
 featured image: /assets/pngegg.png
 type: blog
 tags:
