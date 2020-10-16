@@ -12,7 +12,7 @@ Les générateurs de sites statiques ou SSG (*static site generator*) offrent un
 
 ## Qu'est-ce que c'est ?
 
-![SSG](/assets/best-static-site-generator-2020.png)
+![SSG](../assets/best-static-site-generator-2020.png)
 
 Le principe est en fait assez simple. Un SSG est un programme qui combine, d'une part, une **collection de templates et composants** et, d'autre part, une **source de contenu donnée** pour générer des **fichiers HTML, CSS et JS** qui constitueront le site final.
 
@@ -50,13 +50,13 @@ La plupart des sites dynamiques que nous connaissons (Drupal, WordPress) utilise
 
 ### Performance
 
-![performance](/assets/giphy.gif)
+![performance](../assets/giphy.gif)
 
 Il y a presque 10 ans, lorsque j'ai commencé à réaliser des sites web, ces derniers n'étaient que de simple collections de fichier HTML sur lesquels j'intervenais directement pour modifier le contenu. Ce fonctionnement était très archaïque mais j'étais toujours étonné par le niveau de performance et de rapidité de ces sites très simples. Avec les SSG, j'ai pu retrouver cette quasi-instantanéité de réponse.
 
 Comme nous l'avons vu plus haut, les pages demandées par le visiteur sont déjà prêtes. Le processus de génération des pages web étant totalement dissocié de celui de la requête utilisateur, les pages s'affichent très rapidement. **À vous les supers scores de performance !**
 
-![page speed insight tests](/assets/capture-d’écran-2020-09-18-à-16.01.02.png)
+![page speed insight tests](../assets/capture-d’écran-2020-09-18-à-16.01.02.png)
 
 ### Économie et évolutivité
 
