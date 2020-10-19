@@ -13,7 +13,7 @@ C'est le grand jour ! Je suis fier de dévoiler aujourd'hui un site web fraichem
 
 ### Un site réalisé avec Gatsby
 
-Vous allez beaucoup m'entendre parler de [Gatbsy](https://www.gatsbyjs.org/) et des générateurs de sites statiques en général. Mais quelle est cette nouvelle technologie ? Pour résumer, le SSG (*static site generator*) combine une source de données, des templates et des composants pour générer des sites statiques directement servis aux visiteurs. Un site statique, certes, mais géré dynamiquement ! Les bénéfices sont multiples :
+Vous allez beaucoup m'entendre parler de [Gatsby](https://www.gatsbyjs.org/) et des générateurs de sites statiques en général. Mais quelle est cette nouvelle technologie ? Pour résumer, le SSG (*static site generator*) combine une source de données, des templates et des composants pour générer des sites statiques directement servis aux visiteurs. Un site statique, certes, mais géré dynamiquement ! Les bénéfices sont multiples :
 
 * Des **niveaux de performance inégalables** par des sites dynamiques traditionnels (WordPress par exemple).
 * Des **économies** de gestion et d'hébergement.
