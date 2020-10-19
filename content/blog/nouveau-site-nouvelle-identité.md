@@ -2,7 +2,7 @@
 title: Nouveau site, nouvelle identité
 date: 2020-09-01T08:52:38.868Z
 color: transparent
-featured image: /assets/logo-final-01.png
+featured image: /assets/nouveau-site-header-01.png
 type: blog
 tags:
   - divers
