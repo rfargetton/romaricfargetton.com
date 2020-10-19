@@ -26,11 +26,10 @@ const HeaderCard = styled(Card)`
   }
 `
 const HeaderImg = styled.div`
-  flex: 0 0 auto;
+  flex: 1 0 auto;
   width: 15rem;
   div {
     width: 100%;
-    border-radius: 50%;
     background-color: ${props => props.color};
   }
   @media (max-width: 768px){

@@ -64,7 +64,7 @@ export const query = graphql`
         color
         featured_image {
           childImageSharp {
-            fluid(maxHeight: 500, maxWidth: 500, cropFocus: CENTER, quality: 90) {
+            fluid(maxHeight: 300, maxWidth: 400, cropFocus: CENTER, quality: 90) {
               src
               ...GatsbyImageSharpFluid
             }
