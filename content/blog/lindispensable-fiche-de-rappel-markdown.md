@@ -2,7 +2,7 @@
 title: L'indispensable fiche de rappel Markdown
 date: 2020-09-09T14:04:14.342Z
 color: transparent
-featured image: /assets/guide-markdown-01.png
+featured image: /assets/guide-markdown-header-01.png
 type: blog
 tags:
   - divers
