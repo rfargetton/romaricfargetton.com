@@ -2,7 +2,7 @@
 title: Les générateurs de site statique
 date: 2020-10-16T10:17:27.961Z
 color: transparent
-featured image: /assets/ssg-01.png
+featured image: /assets/ssg-header-01.png
 type: blog
 tags:
   - SSG
