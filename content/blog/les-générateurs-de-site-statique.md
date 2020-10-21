@@ -10,11 +10,13 @@ tags:
 ---
 Les générateurs de sites statiques ou SSG (*static site generator*) offrent une nouvelle option, novatrice et prometteuse, dans la création de sites internet. J'ai moi-même choisi d'utiliser un SSG ([Gatsby](https://www.gatsbyjs.com)) pour la création de ce site internet. Mais comment fonctionnent-ils ? Quels sont leurs points forts ? En quoi sont-ils différents de solutions plus traditionnelles comme WordPress ou Drupal ?
 
-## Qu'est-ce que c'est ?
-
 ![SSG](../assets/best-static-site-generator-2020.png)
 
+## Qu'est-ce que c'est ?
+
 Le principe est en fait assez simple. Un SSG est un programme qui combine, d'une part, une **collection de templates et composants** et, d'autre part, une **source de contenu donnée** pour générer des **fichiers HTML, CSS et JS** qui constitueront le site final.
+
+![le fonctionnement du SSG](/assets/ssg-flow.png)
 
 Par la suite, la collection de fichiers HTML qui composent le site peuvent simplement être mis en ligne, prêts à être distribués au visiteurs du site. Dans cet article j'utilise le terme SSG mais pour désigner cet assemblage de technologies, on utilise aussi souvent le terme JAMstack.
 
@@ -56,7 +58,7 @@ Il y a presque 10 ans, lorsque j'ai commencé à réaliser des sites web, ces de
 
 Comme nous l'avons vu plus haut, les pages demandées par le visiteur sont déjà prêtes. Le processus de génération des pages web étant totalement dissocié de celui de la requête utilisateur, les pages s'affichent très rapidement. **À vous les supers scores de performance !**
 
-![page speed insight tests](../assets/capture-d’écran-2020-09-18-à-16.01.02.png)
+![Page Speed Insight – test de performance](../assets/capture-d’écran-2020-09-18-à-16.01.02.png)
 
 ### Économie et évolutivité
 
@@ -74,6 +76,6 @@ Ceci étant dit, l'environnement JAMstack est actuellement en pleine ébullition
 
 Les SSG ne constituent peut-être pas la solution idéale pour tous les projets mais cette nouvelle manière de créer des sites web est très enthousiasmante. Ci-dessous quelques liens utiles pour se documenter et peut-être démarrer son premier projet JAMstack !
 
-- [Jamstack.org (en anglais)](https://jamstack.org)
-- [C'est quoi la Jamstack au juste ? – Jamstatic](https://jamstatic.fr/2019/02/07/c-est-quoi-la-jamstack/)
-- [Welcome to the Jamstack – Netlify (en anglais)](https://www.netlify.com/jamstack/)
+* [Jamstack.org (en anglais)](https://jamstack.org)
+* [C'est quoi la Jamstack au juste ? – Jamstatic](https://jamstatic.fr/2019/02/07/c-est-quoi-la-jamstack/)
+* [Welcome to the Jamstack – Netlify (en anglais)](https://www.netlify.com/jamstack/)
