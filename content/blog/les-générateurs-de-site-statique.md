@@ -16,7 +16,7 @@ Les générateurs de sites statiques ou SSG (*static site generator*) offrent un
 
 Le principe est en fait assez simple. Un SSG est un programme qui combine, d'une part, une **collection de templates et composants** et, d'autre part, une **source de contenu donnée** pour générer des **fichiers HTML, CSS et JS** qui constitueront le site final.
 
-![le fonctionnement du SSG](/assets/ssg-flow.png)
+![le fonctionnement du SSG](../assets/ssg-flow.png)
 
 Par la suite, la collection de fichiers HTML qui composent le site peuvent simplement être mis en ligne, prêts à être distribués au visiteurs du site. Dans cet article j'utilise le terme SSG mais pour désigner cet assemblage de technologies, on utilise aussi souvent le terme JAMstack.
 
