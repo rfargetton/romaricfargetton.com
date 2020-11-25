@@ -70,7 +70,7 @@ Par ailleurs, avec un site statique, pas besoin de mettre son plan d'hébergemen
 
 Malheureusement, aucune solution n'est parfaite. Certes, les sites statiques sont performants, sûres, simples à déployer et à faire évoluer mais ils ne correspondent pas forcément à tout type de projet. Pour grossir le trait, un SSG convient d'avantage à un site qui requiert peu d'interactions avec l'utilisateur. **Les blogs, sites de documentation et de présentation, *landing page* etc. sont de parfaits candidats pour un premier projet SSG !**
 
-Ceci étant dit, l'environnement JAMstack est actuellement en pleine ébullition. Start-ups, agences digitales et développeurs à travers le monde se tournent de plus en plus vers cette option en raison des nombreux bénéfices qu'elle présente. De nouvelles solutions apparaissent tous les jours et offrent de nouvelles perspectives pour tous ceux qui aiment créer, développer et utiliser des sites statiques. Le framework** [Next.js](htttps://www.nextjs.org)** par exemple,  **peut mêler pages statiques et pages générées coté serveur**, ce qui le rend beaucoup plus polyvalent qu'un SSG classique tel que Gatsby.
+Ceci étant dit, l'environnement JAMstack est actuellement en pleine ébullition. Start-ups, agences digitales et développeurs à travers le monde se tournent de plus en plus vers cette option en raison des nombreux bénéfices qu'elle présente. De nouvelles solutions apparaissent tous les jours et offrent de nouvelles perspectives pour tous ceux qui aiment créer, développer et utiliser des sites statiques. Le framework **[Next.js](htttps://www.nextjs.org)** par exemple,  **peut mêler pages statiques et pages générées coté serveur**, ce qui le rend beaucoup plus polyvalent qu'un SSG classique tel que Gatsby.
 
 ## Pour conclure
 
