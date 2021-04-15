@@ -1,7 +1,7 @@
 ---
 title: Ogénie
 date: 2021-04-15T08:45:46.923Z
-featured image: /assets/capture-d’écran-2021-04-15-à-10.44.05.png
+featured image: /assets/capture-d’écran-2021-04-15-à-10.57.56.png
 link: https://www.ogenie.fr
 type: project
 ---
