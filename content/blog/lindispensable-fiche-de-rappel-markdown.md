@@ -1,13 +1,13 @@
 ---
 title: L'indispensable fiche de rappel Markdown
-date: 2020-09-09T14:04:14.342Z
+date: 2021-05-31T06:53:40.330Z
 color: transparent
 featured image: /assets/guide-markdown-header-01.png
 type: blog
 tags:
   - divers
 ---
-J'adore Markdown. Pour moi, c'est un outil incontournable qui peut être aussi utile au travail que pour les tâches du quotidien. Personnellement, je m'en sers surtout pour prendre des notes, rédiger mes cours et les articles de ce blog. La rédaction d'une fiche de rappel s'est donc rapidement imposée comme une évidence, et j'ai décidé aujourd'hui de partager ce précieux document 😃.
+Markdown, c'est l'ultime outil de prise de note et de rédaction. Personnellement, je l'utilise surtout pour rédiger mes cours et les articles de ce blog et pour prendre des notes au quotidien. La rédaction d'une fiche de rappel s'est donc rapidement imposée comme une évidence, et j'ai décidé aujourd'hui de partager ce précieux document 😃.
 
 ## Mais qu'est-ce que Markdown ?
 
@@ -152,3 +152,10 @@ Voici un peu de `code en ligne`.
 | --- | --- | --- |
 | Cellule 1 | Cellule 2 | Cellule 3 |
 | Cellule 1 | Cellule 2 | Cellule 3 |
+
+## Liens utiles
+
+Vous retrouverez ci-dessous quelques liens utiles pour poursuivre votre apprentissage de Markdown.
+
+- [Markdown Guide](https://www.markdownguide.org/)
+- [Page Wikipedia](https://fr.wikipedia.org/wiki/Markdown)
